@@ -35,7 +35,6 @@ public class ExcursionDetailAdapter extends CursorAdapter {
         row.setTag(holder);
         return row;
     }
-/*    sfsfs*/
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
