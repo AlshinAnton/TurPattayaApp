@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:onClick="startDetailActivity"
+    android:padding="10dp"
+    tools:context="ru.turpattaya.turpattayaapp.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="75%"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/text_excursion_preview"
+        style="@android:style/TextAppearance.Small"
+        android:layout_width="wrap_content"
+        app:layout_widthPercent="80%"
+        android:layout_height="0dp"
+        app:layout_heightPercent="25%"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="2dp"
+        android:layout_alignParentBottom="true"
+        tools:text="здесь описание экскурсии , краткий вариант блаблабла, бла бла бла!!!" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_widthPercent="20%"
+        android:layout_height="0dp"
+        app:layout_heightPercent="12%"
+        android:layout_below="@+id/text_price_preview"
+        android:layout_alignParentRight="true"
+        android:text="Бат" />
+
+    <TextView
+        android:id="@+id/text_price_preview"
+        android:layout_width="wrap_content"
+        app:layout_widthPercent="20%"
+        android:layout_height="0dp"
+        app:layout_heightPercent="12%"
+        android:textSize="20sp"
+        tools:text="2500"
+        android:layout_alignTop="@+id/text_excursion_preview"
+        android:layout_alignParentEnd="true" />
+
+</android.support.percent.PercentRelativeLayout>
+
+    <!--<android.support.percent.PercentFrameLayout
+    android:id="@+id/adapter_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_heightPercent="70%">--><!--
+<RatingBar
+android:id="@+id/rating"
+android:theme="colorRatingBarBlue"
+android:layout_gravity="bottom"
+style="?android:attr/ratingBarStyleSmall"
+android:stepSize="0.5"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:visibility="visible"/>-->

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">TurPattayaApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_excursion_detail">ExcursionDetailActivity</string>
+
+    <string-array name="spinnerfrom">
+        <item>Паттайя</item>
+        <item>Suvarnabhum аэропорт(Бангкок)</item>
+        <item>Don Muaeng аэропорт(Бангкок)</item>
+        <item>U-Tapao аэропорт(Паттайя)</item>
+        <item>Бангкок</item>
+    </string-array>
+
+    <string-array name="spinnerto">
+        <item>Suvarnabhum аэропорт(Бангкок)</item>
+        <item>Паттайя</item>
+        <item>Don Muaeng аэропорт(Бангкок)</item>
+        <item>U-Tapao аэропорт(Паттайя)</item>
+        <item>Бангкок</item>
+        <item>Хуахин</item>
+        <item>BanPae пирс(до парома на о.Самет)</item>
+        <item>До парома на остров КоЧанг </item>
+        <item>Зоопарк КаоКео(туда-обратно)</item>
+        <item>Сад Нонг Нуч(туда-обратно)</item>
+        <item>Военный пляж(туда-обратно)</item>
+        <item>Тигровый зоопарк(туда-обратно)</item>
+        <item>Сафари парк Бангкок(туда-обратно)</item>
+        <item>Сиам парк Бангкок(туда-обратно)</item>
+        <item>Диснейлэнд Бангкок(туда-обратно)</item>
+        <item>Аквапарк Рамаяна(туда-обратно)</item>
+        <item>Остров КоКуд</item>
+        <item>Бангкок(с ожиданием 1 час)</item>
+        <item>Бангкок(с ожиданием 5 часов)</item>
+        <item>Казино (Камбоджа с ожиданием 1 день)</item>
+    </string-array>
+
+    <string-array name="spinnerTypeOfCar">
+        <item>Эконом</item>
+        <item>Минивэн</item>
+        <item>Микроавтобус</item>
+    </string-array>
+
+</resources>
