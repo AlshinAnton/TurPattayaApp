@@ -2,6 +2,7 @@ package ru.turpattaya.turpattayaapp;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +30,7 @@ public class ExcursionDetailAdapter extends CursorAdapter {
         View row = LayoutInflater.from(context).inflate(R.layout.activity_excursion_detail, viewGroup, false);
 
         ViewHolder holder = new ViewHolder();
-        holder.adapterviewFlipper = (AdapterViewFlipper) row.findViewById(R.id.adapter_viewFlipper_excursion_detail);
+        holder.viewPagerDetail = (ViewPager) row.findViewById(R.id.viewPager_excursion_detail);
         holder.pagetitleExcursionDetail = (TextView) row.findViewById(R.id.excursion_detail_pagetitle);
         holder.contentExcursionDetail = (TextView) row.findViewById(R.id.excursion_detail_content);
         row.setTag(holder);
@@ -47,7 +48,7 @@ public class ExcursionDetailAdapter extends CursorAdapter {
         holder.contentExcursionDetail.setText(cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT)));
         String url = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_URL));
         if (!TextUtils.isEmpty(url)) {
-            Picasso.with(context).load(url).fit().centerCrop().into((Target) holder.adapterviewFlipper);
+            Picasso.with(context).load(url).fit().centerCrop().into((Target) holder.viewPagerDetail);
         }
     }
 }

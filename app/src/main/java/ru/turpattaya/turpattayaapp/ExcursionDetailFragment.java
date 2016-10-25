@@ -4,6 +4,7 @@ package ru.turpattaya.turpattayaapp;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ public class ExcursionDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_detail_excursion, container, false);
-        ViewFlipper viewFlipperDetailExcursion = (ViewFlipper) view.findViewById(R.id.viewFlipper_excursion_detail);
+        ViewPager viewPagerDetail = (ViewPager) view.findViewById(R.id.viewPager_excursion_detail);
         TextView pagetitle = (TextView) view.findViewById(R.id.excursion_detail_pagetitle);
         TextView content = (TextView) view.findViewById(R.id.excursion_detail_content);
 
@@ -27,7 +28,8 @@ public class ExcursionDetailFragment extends Fragment {
         Cursor cursor = helper.getReadableDatabase().query(
                 ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
                 null,
-                null,
+                ExcursionTable.COLUMN_EXCURSION_ID + " =?",
+                new String[]{String.valueOf(2)},
                 null,
                 null,
                 null,

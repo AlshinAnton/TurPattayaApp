@@ -4,6 +4,7 @@ package ru.turpattaya.turpattayaapp;
  * Created by MSI on 20.10.2016.
  */
 
+import android.support.v4.view.ViewPager;
 import android.widget.AdapterViewFlipper;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ public class ViewHolder {
     TextView textExcursionPreview;
     TextView textPricePreview;
 
-    AdapterViewFlipper adapterviewFlipper;
+    ViewPager viewPagerDetail;
     TextView pagetitleExcursionDetail;
     TextView contentExcursionDetail;
 
