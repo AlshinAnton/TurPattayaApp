@@ -46,7 +46,7 @@ public class ExcursionDetailAdapter extends CursorAdapter {
     private void populateViewDetailExcursion(ViewHolder holder, Cursor cursor, Context context) {
         holder.pagetitleExcursionDetail.setText(cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE)));
         holder.contentExcursionDetail.setText(cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT)));
-        String url = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_URL));
+        String url = cursor.getString(cursor.getColumnIndex(ImagesDetailTable.COLUMN_IMAGESDETAIL_URL));
         if (!TextUtils.isEmpty(url)) {
             Picasso.with(context).load(url).fit().centerCrop().into((Target) holder.viewPagerDetail);
         }

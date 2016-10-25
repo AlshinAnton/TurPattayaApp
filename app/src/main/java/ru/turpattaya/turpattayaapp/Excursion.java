@@ -1,5 +1,6 @@
 package ru.turpattaya.turpattayaapp;
 
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -11,12 +12,12 @@ public class Excursion implements Comparable<Excursion> {
     private String textExcursionItem;
     private String textPriceItem;
 
-    private ViewFlipper viewFlipper;
+    private ViewPager viewPagerDetail;
     private String pagetitleExcursionDetail;
     private String contextExcursionDetail;
 
-    public Excursion(ViewFlipper viewFlipper, String pagetitleExcursionDetail, String contextExcursionDetail) {
-        this.viewFlipper = viewFlipper;
+    public Excursion(ViewPager viewPagerDetail, String pagetitleExcursionDetail, String contextExcursionDetail) {
+        this.viewPagerDetail = viewPagerDetail;
         this.pagetitleExcursionDetail = pagetitleExcursionDetail;
         this.contextExcursionDetail = contextExcursionDetail;
 
@@ -57,12 +58,12 @@ public class Excursion implements Comparable<Excursion> {
         return getTextExcursionItem().compareTo(another.getTextExcursionItem());
     }
 
-    public ViewFlipper getViewFlipper() {
-        return viewFlipper;
+    public ViewPager getViewPagerDetail() {
+        return viewPagerDetail;
     }
 
-    public void setViewFlipper(ViewFlipper viewFlipper) {
-        this.viewFlipper = viewFlipper;
+    public void setViewPagerDetail(ViewPager viewPagerDetail) {
+        this.viewPagerDetail = viewPagerDetail;
     }
 
     public String getPagetitleExcursionDetail() {
