@@ -29,7 +29,7 @@ public class ExcursionDetailFragment extends Fragment {
                 ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
                 null,
                 ExcursionTable.COLUMN_EXCURSION_ID + " =?",
-                new String[]{String.valueOf(2)},
+                new String[]{String.valueOf(ExcursionTable.COLUMN_EXCURSION_ID)},
                 null,
                 null,
                 null,
