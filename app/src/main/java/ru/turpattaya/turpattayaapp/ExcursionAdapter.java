@@ -1,8 +1,10 @@
 package ru.turpattaya.turpattayaapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +37,7 @@ public class ExcursionAdapter extends CursorAdapter {
         return row;
 
     }
-    private void populateViewExcursion(ViewHolder holder, Cursor cursor, Context context)
+    private void populateViewExcursion(ViewHolder holder, Cursor cursor, final Context context, View view)
     {
         holder.textExcursionPreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_PAGETITLE)));
         holder.textPricePreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_VALUE)));
@@ -46,11 +48,24 @@ public class ExcursionAdapter extends CursorAdapter {
             // holder.imagePreview.setImageURI(Uri.parse()));
 
         }
+
+        final long id = cursor.getLong(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_ID));
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Valo", "got it! -> " + id);
+                Intent intent = new Intent(context, ExcursionDetailActivity.class);
+                intent.putExtra("id", id);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         ViewHolder holder = (ViewHolder) view.getTag();
-        populateViewExcursion(holder, cursor, context);
+        populateViewExcursion(holder, cursor, context, view);
     }
 }

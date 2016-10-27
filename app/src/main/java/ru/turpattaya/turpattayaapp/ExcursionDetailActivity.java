@@ -1,5 +1,8 @@
 package ru.turpattaya.turpattayaapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,17 +14,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class ExcursionDetailActivity extends AppCompatActivity {
 
+    Cursor cursor;
+    MySQLiteHelper helper;
+
     private TextView pagetitleExcursionDetail;
-    private TextView contextExcursionDetail;
+    private TextView contentExcursionDetail;
 
     private ViewPager viewPagerDetail;
-    private MyAdapter adapter;
+    /*private ImageAdapter imageAdapter;*/
+    private ExcursionDetailAdapter excursionDetailAdapter;
     int[] imageArray = new int[]{};
-
 
 
     @Override
@@ -29,15 +36,44 @@ public class ExcursionDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excursion_detail);
 
-        pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
-        contextExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
+        Intent intent = getIntent();
+        long id = intent.getLongExtra("id", 0);
 
-        adapter = new MyAdapter(getSupportFragmentManager(), imageArray);
+        pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
+        contentExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
         viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
 
-        viewPagerDetail.setAdapter(adapter);
-        viewPagerDetail.setCurrentItem( 1 );
-        viewPagerDetail.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        ListView list = (ListView) findViewById(R.id.list_excursion_detail);
+
+        helper = new MySQLiteHelper(this);
+
+        cursor = helper.getReadableDatabase().query(
+                ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
+                null,
+                ExcursionTable.COLUMN_EXCURSION_ID + " =?",
+                new String[]{String.valueOf(id)},
+                null,
+                null,
+                null,
+                null
+        );
+        excursionDetailAdapter = new ExcursionDetailAdapter(this, cursor);
+        list.setAdapter(excursionDetailAdapter);
+
+        
+
+
+
+/*        imageAdapter = new ImageAdapter(getSupportFragmentManager(), imageArray);*/
+
+
+    }
+
+}
+
+        /*viewPagerDetail.setAdapter(imageAdapter);
+        viewPagerDetail.setCurrentItem( 1 );*/
+        /*viewPagerDetail.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int index) {
                 Log.v( "onPageSelected", String.valueOf( index ) );
@@ -55,20 +91,20 @@ public class ExcursionDetailActivity extends AppCompatActivity {
                 if (state ==ViewPager.SCROLL_STATE_IDLE) {
                     int index = viewPagerDetail.getCurrentItem();
                     if ( index == 0 )
-                        viewPagerDetail.setCurrentItem( adapter.getCount() - 2, false );
-                    else if ( index == adapter.getCount() - 1 )
+                        viewPagerDetail.setCurrentItem( imageAdapter.getCount() - 2, false );
+                    else if ( index == imageAdapter.getCount() - 1 )
                         viewPagerDetail.setCurrentItem( 1, false);
                 }
             }
         });
-    }
+    }*/
 
 
-    public static class MyAdapter extends FragmentPagerAdapter {
+    /*public static class ImageAdapter extends FragmentPagerAdapter {
 
         int[] promoImageIds;
 
-        public MyAdapter(FragmentManager fm, int[] promoImageIds){
+        public ImageAdapter(FragmentManager fm, int[] promoImageIds){
             super(fm);
             this.promoImageIds = promoImageIds;
         }
@@ -117,8 +153,9 @@ public class ExcursionDetailActivity extends AppCompatActivity {
             v.setImageResource( imageID );
             return v;
         }
-    }
-}
+    }*/
+
+
 
 
 

@@ -67,13 +67,13 @@ public class ExcursionsListFragment extends Fragment  {
         ExcursionAdapter adapter = new ExcursionAdapter(getContext(), cursor);
 
         list.setAdapter(adapter);
-       /* list.setOnClickListener(new View.OnClickListener() {
+
+ /*       list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
-*/
+        });*/
         return view;
     }
 

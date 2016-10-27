@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/viewPager_excursion_detail"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/image_excursion_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </android.support.v4.view.ViewPager>
+
+
+    <TextView
+        android:id="@+id/excursion_detail_pagetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPager_excursion_detail"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/excursion_detail_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/excursion_detail_pagetitle"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
