@@ -49,22 +49,28 @@ public class ExcursionDetailActivity extends AppCompatActivity {
 
         helper = new MySQLiteHelper(this);
 
-        cursor = helper.getReadableDatabase().query(
-                ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
-                null,
-                ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_EXCURSIONID + " =?",
-                new String[]{String.valueOf(id)},
-                null,
-                null,
-                null,
-                null
-        );
-
-            String title = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE));
-            pagetitleExcursionDetail.setText(title);
-            String content = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT));
-            contentExcursionDetail.setText(content);
-            cursor.close();
+        try {
+            cursor = helper.getReadableDatabase().query(
+                    ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
+                    null,
+                    ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_EXCURSIONID + " =?",
+                    new String[]{String.valueOf(id)},
+                    null,
+                    null,
+                    null,
+                    null
+            );
+            if (cursor != null && cursor.moveToFirst()) {
+                String title = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE));
+                pagetitleExcursionDetail.setText(title);
+                String content = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT));
+                contentExcursionDetail.setText(content);
+            }
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
 
 
         /*cursor = helper.getReadableDatabase().query(
