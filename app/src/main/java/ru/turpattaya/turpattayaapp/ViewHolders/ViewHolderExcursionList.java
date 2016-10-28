@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.ViewHolders;
 
 /**
  * Created by MSI on 20.10.2016.
@@ -14,15 +14,13 @@ import android.widget.ViewFlipper;
  * Created by MSI on 04.10.2016.
  */
 
-public class ViewHolder {
+public class ViewHolderExcursionList {
 
-    ImageView imagePreview;
-    TextView textExcursionPreview;
-    TextView textPricePreview;
+    public ImageView imagePreview;
+    public TextView textExcursionPreview;
+    public TextView textPricePreview;
 
-    ViewPager viewPagerDetail;
-    TextView pagetitleExcursionDetail;
-    TextView contentExcursionDetail;
+
 
     TextView from_item_taxi;
     TextView where_item_taxi;

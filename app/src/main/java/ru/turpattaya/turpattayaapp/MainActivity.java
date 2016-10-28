@@ -54,14 +54,6 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setLogo(R.drawable.logo);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -88,7 +80,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void startDetailActivity(View view) {
+/*    public void startDetailActivity(View view) {
         PercentRelativeLayout percentRelativeLayout  = (PercentRelativeLayout) view.findViewById(R.id.container);
         percentRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +89,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-    }
+    }*/
 
     static class ViewPagerAdapter extends FragmentPagerAdapter {
 

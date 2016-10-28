@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import ru.turpattaya.turpattayaapp.ViewHolders.ViewHolderExcursionList;
+
 
 public class ExcursionAdapter extends CursorAdapter {
 
@@ -26,7 +28,7 @@ public class ExcursionAdapter extends CursorAdapter {
     public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
         View row = LayoutInflater.from(context).inflate(R.layout.item_excursion, viewGroup, false);
 
-        ViewHolder holder = new ViewHolder();
+        ViewHolderExcursionList holder = new ViewHolderExcursionList();
         holder.imagePreview = (ImageView) row.findViewById(R.id.image_preview);
         holder.textExcursionPreview = (TextView) row.findViewById(R.id.text_excursion_preview);
         holder.textPricePreview = (TextView) row.findViewById(R.id.text_price_preview);
@@ -37,7 +39,7 @@ public class ExcursionAdapter extends CursorAdapter {
         return row;
 
     }
-    private void populateViewExcursion(ViewHolder holder, Cursor cursor, final Context context, View view)
+    private void populateViewExcursion(ViewHolderExcursionList holder, Cursor cursor, final Context context, View view)
     {
         holder.textExcursionPreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_PAGETITLE)));
         holder.textPricePreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_VALUE)));
@@ -65,7 +67,7 @@ public class ExcursionAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ViewHolder holder = (ViewHolder) view.getTag();
+        ViewHolderExcursionList holder = (ViewHolderExcursionList) view.getTag();
         populateViewExcursion(holder, cursor, context, view);
     }
 }

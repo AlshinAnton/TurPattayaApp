@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class ExcursionDetailTable {
     public static final String TABLE_EXCURSIONDETAIL = "ExcursionDetailTable";
     public static final String COLUMN_EXCURSIONDETAIL_ID = "_id";
+    public static final String COLUMN_EXCURSIONDETAIL_EXCURSIONID = "excursionid";
     public static final String COLUMN_EXCURSIONDETAIL_PAGETITLE = "pagetitle";
     public static final String COLUMN_EXCURSIONDETAIL_CONTENT = "content";
 

@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.IOException;
+
 public class ExcursionDetailActivity extends AppCompatActivity {
 
     Cursor cursor;
@@ -28,7 +30,7 @@ public class ExcursionDetailActivity extends AppCompatActivity {
     private ViewPager viewPagerDetail;
     /*private ImageAdapter imageAdapter;*/
     private ExcursionDetailAdapter excursionDetailAdapter;
-    int[] imageArray = new int[]{};
+    int[] imageArray = new int[]{R.id.image1_excursion_detail, R.id.image2_excursion_detail, R.id.image3_excursion_detail, R.id.image4_excursion_detail, R.id.image5_excursion_detail};
 
 
     @Override
@@ -41,7 +43,7 @@ public class ExcursionDetailActivity extends AppCompatActivity {
 
         pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
         contentExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
-        viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
+        /*viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);*/
 
         ListView list = (ListView) findViewById(R.id.list_excursion_detail);
 
@@ -50,6 +52,24 @@ public class ExcursionDetailActivity extends AppCompatActivity {
         cursor = helper.getReadableDatabase().query(
                 ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
                 null,
+                ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_EXCURSIONID + " =?",
+                new String[]{String.valueOf(id)},
+                null,
+                null,
+                null,
+                null
+        );
+
+            String title = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE));
+            pagetitleExcursionDetail.setText(title);
+            String content = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT));
+            contentExcursionDetail.setText(content);
+            cursor.close();
+
+
+        /*cursor = helper.getReadableDatabase().query(
+                ImagesDetailTable.TABLE_IMAGESDETAIL,
+                null,
                 ExcursionTable.COLUMN_EXCURSION_ID + " =?",
                 new String[]{String.valueOf(id)},
                 null,
@@ -57,10 +77,13 @@ public class ExcursionDetailActivity extends AppCompatActivity {
                 null,
                 null
         );
-        excursionDetailAdapter = new ExcursionDetailAdapter(this, cursor);
-        list.setAdapter(excursionDetailAdapter);
 
-        
+
+            excursionDetailAdapter = new ExcursionDetailAdapter(this, cursor);
+        list.setAdapter(excursionDetailAdapter);
+        cursor.close();*/
+
+
 
 
 

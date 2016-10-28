@@ -7,13 +7,14 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterViewFlipper;
 import android.widget.CursorAdapter;
-import android.widget.TextView;
-import android.widget.ViewFlipper;
+import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
+
+import ru.turpattaya.turpattayaapp.ViewHolders.ViewHolderExcursionDetail;
+import ru.turpattaya.turpattayaapp.ViewHolders.ViewHolderExcursionList;
 
 /**
  * Created by MSI on 13.10.2016.
@@ -27,28 +28,26 @@ public class ExcursionDetailAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
-        View row = LayoutInflater.from(context).inflate(R.layout.activity_excursion_detail, viewGroup, false);
+        View row = LayoutInflater.from(context).inflate(R.layout.image_for_viewpager_detailactivity, viewGroup, false);
 
-        ViewHolder holder = new ViewHolder();
-        holder.viewPagerDetail = (ViewPager) row.findViewById(R.id.viewPager_excursion_detail);
-        holder.pagetitleExcursionDetail = (TextView) row.findViewById(R.id.excursion_detail_pagetitle);
-        holder.contentExcursionDetail = (TextView) row.findViewById(R.id.excursion_detail_content);
+        ViewHolderExcursionDetail holder = new ViewHolderExcursionDetail();
+        /*holder.viewPagerDetail = (ViewPager) row.findViewById(R.id.viewPager_excursion_detail);*/
+        holder.imageViewExcursionDetail = (ImageView) row.findViewById(R.id.image1_excursion_detail);
         row.setTag(holder);
         return row;
     }
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ViewHolder holder = (ViewHolder) view.getTag();
+        ViewHolderExcursionDetail holder = (ViewHolderExcursionDetail) view.getTag();
         populateViewDetailExcursion(holder, cursor, context);
     }
 
-    private void populateViewDetailExcursion(ViewHolder holder, Cursor cursor, Context context) {
-        holder.pagetitleExcursionDetail.setText(cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE)));
-        holder.contentExcursionDetail.setText(cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT)));
+    private void populateViewDetailExcursion(ViewHolderExcursionDetail holder, Cursor cursor, Context context) {
+
         String url = cursor.getString(cursor.getColumnIndex(ImagesDetailTable.COLUMN_IMAGESDETAIL_URL));
         if (!TextUtils.isEmpty(url)) {
-            Picasso.with(context).load(url).fit().centerCrop().into((Target) holder.viewPagerDetail);
+            Picasso.with(context).load(url).fit().centerCrop().into((Target) holder.imageViewExcursionDetail);
         }
     }
 }
