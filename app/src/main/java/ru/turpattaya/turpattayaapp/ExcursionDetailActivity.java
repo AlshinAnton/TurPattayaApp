@@ -44,6 +44,7 @@ public class ExcursionDetailActivity extends AppCompatActivity {
         pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
         contentExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
         viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
+        viewPagerDetail.setPageTransformer(true, new ImagesDetailAnimation());
 
         helper = new MySQLiteHelper(this);
 
