@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ExcursionDetailActivity extends AppCompatActivity {
 
@@ -28,9 +31,6 @@ public class ExcursionDetailActivity extends AppCompatActivity {
     private TextView contentExcursionDetail;
 
     private ViewPager viewPagerDetail;
-    /*private ImageAdapter imageAdapter;*/
-    private ExcursionDetailAdapter excursionDetailAdapter;
-    int[] imageArray = new int[]{R.id.image1_excursion_detail, R.id.image2_excursion_detail, R.id.image3_excursion_detail, R.id.image4_excursion_detail, R.id.image5_excursion_detail};
 
 
     @Override
@@ -43,13 +43,11 @@ public class ExcursionDetailActivity extends AppCompatActivity {
 
         pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
         contentExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
-        /*viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);*/
-
-        ListView list = (ListView) findViewById(R.id.list_excursion_detail);
+        viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
 
         helper = new MySQLiteHelper(this);
 
-        try {
+
             cursor = helper.getReadableDatabase().query(
                     ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
                     null,
@@ -62,21 +60,17 @@ public class ExcursionDetailActivity extends AppCompatActivity {
             );
             if (cursor != null && cursor.moveToFirst()) {
                 String title = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE));
-                pagetitleExcursionDetail.setText(title);
+                pagetitleExcursionDetail.setText(Html.fromHtml(title));
                 String content = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT));
-                contentExcursionDetail.setText(content);
-            }
-        } finally {
-            if (cursor != null) {
+                contentExcursionDetail.setText(Html.fromHtml(content));
                 cursor.close();
-            }
         }
 
 
-        /*cursor = helper.getReadableDatabase().query(
+        Cursor imagesCursor = helper.getReadableDatabase().query(
                 ImagesDetailTable.TABLE_IMAGESDETAIL,
                 null,
-                ExcursionTable.COLUMN_EXCURSION_ID + " =?",
+                ImagesDetailTable.COLUMN_IMAGESDETAIL_EXCURSIONID + " =?",
                 new String[]{String.valueOf(id)},
                 null,
                 null,
@@ -84,137 +78,45 @@ public class ExcursionDetailActivity extends AppCompatActivity {
                 null
         );
 
+        if (!imagesCursor.moveToFirst()) return;
 
-            excursionDetailAdapter = new ExcursionDetailAdapter(this, cursor);
-        list.setAdapter(excursionDetailAdapter);
-        cursor.close();*/
+        ArrayList<String> urls = new ArrayList<>();
+        while (!imagesCursor.isAfterLast()) {
+            urls.add(imagesCursor.getString(imagesCursor.getColumnIndexOrThrow(ImagesDetailTable.COLUMN_IMAGESDETAIL_URL)));
+            imagesCursor.moveToNext();
+        }
+        imagesCursor.close();
 
+        if (urls.isEmpty()) return;
 
-
-
-
-/*        imageAdapter = new ImageAdapter(getSupportFragmentManager(), imageArray);*/
-
+        ImagesDetailPagerAdapter pagerAdapter = new ImagesDetailPagerAdapter(getSupportFragmentManager(), urls);
+        viewPagerDetail.setAdapter(pagerAdapter);
 
     }
 
-}
+    private class ImagesDetailPagerAdapter extends FragmentStatePagerAdapter {
+        private ArrayList<String> adapterUrls;
 
-        /*viewPagerDetail.setAdapter(imageAdapter);
-        viewPagerDetail.setCurrentItem( 1 );*/
-        /*viewPagerDetail.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageSelected(int index) {
-                Log.v( "onPageSelected", String.valueOf( index ) );
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-                // Log.v("onPageScrolled", "");
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                Log.v("onPageScrollStateCh", String.valueOf(state));
-
-                if (state ==ViewPager.SCROLL_STATE_IDLE) {
-                    int index = viewPagerDetail.getCurrentItem();
-                    if ( index == 0 )
-                        viewPagerDetail.setCurrentItem( imageAdapter.getCount() - 2, false );
-                    else if ( index == imageAdapter.getCount() - 1 )
-                        viewPagerDetail.setCurrentItem( 1, false);
-                }
-            }
-        });
-    }*/
-
-
-    /*public static class ImageAdapter extends FragmentPagerAdapter {
-
-        int[] promoImageIds;
-
-        public ImageAdapter(FragmentManager fm, int[] promoImageIds){
+        ImagesDetailPagerAdapter(FragmentManager fm, ArrayList<String> urls) {
             super(fm);
-            this.promoImageIds = promoImageIds;
-        }
-
-        @Override
-        public int getCount(){
-            return promoImageIds.length;
+            this.adapterUrls = urls;
         }
 
         @Override
         public Fragment getItem(int position) {
-
-            return PromoFragment.newInstance( promoImageIds[position] );
-        }
-    }
-
-    public static class PromoFragment extends Fragment
-    {
-        int imageID;
-
-
-        static PromoFragment newInstance( int imageID)
-        {
-            PromoFragment f = new PromoFragment();
-
-            // Supply num input as an argument.
-            Bundle args = new Bundle();
-            args.putInt( "imageID", imageID );
-            f.setArguments(args);
-
-            return f;
-        }
-
-        @Override
-        public void onCreate(Bundle savedInstanceState)
-        {
-            super.onCreate(savedInstanceState);
-            imageID = getArguments() != null ? getArguments().getInt( "imageID" ) : null;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState)
-        {
-            ImageView v = (ImageView) inflater.inflate(R.layout.viewpager_detail, container, false);
-            v.setImageResource( imageID );
-            return v;
-        }
-    }*/
-
-
-
-
-
-
-
-
-    /*private void setupViewPagerDetail(ViewPager viewPagerDetail) {
-        ViewPagerDetailAdapter adapter = new ViewPagerDetailAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ExcursionDetailFragment(), ImageView );
-    }
-
-    static class ViewPagerDetailAdapter extends FragmentPagerAdapter {
-
-        private final List<Fragment> imageList = new ArrayList<>(); //контейнер для изображений
-
-
-        public ViewPagerDetailAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return imageList.get(position);
+            ExcursionImageItemFragment excursionImageItemFragment = new ExcursionImageItemFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("url", adapterUrls.get(position));
+            excursionImageItemFragment.setArguments(bundle);
+            return excursionImageItemFragment;
         }
 
         @Override
         public int getCount() {
-            return imageList.size();
+            return adapterUrls.size();
         }
-        void addFragment(Fragment fragment, ImageView imageView) {
+    }
+}
 
-        }
-    }*/
+
+

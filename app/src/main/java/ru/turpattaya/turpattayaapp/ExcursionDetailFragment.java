@@ -36,8 +36,6 @@ public class ExcursionDetailFragment extends Fragment {
                 null
         );
 
-        ExcursionDetailAdapter adapter = new ExcursionDetailAdapter(getContext(), cursor);
-
 
         /*list.setAdapter(adapter);*/
 
