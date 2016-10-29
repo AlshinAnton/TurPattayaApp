@@ -35,7 +35,7 @@
             android:layout_below="@+id/text2_fragment_taxi"
             android:layout_marginTop="5dp"
             android:entries="@array/spinnerfrom"
-
+            android:prompt="Откуда"
             android:spinnerMode="dialog"/>
 
 

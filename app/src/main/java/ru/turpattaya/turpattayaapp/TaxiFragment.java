@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class TaxiFragment extends Fragment {
     private Spinner spinnerFrom;
     private Spinner spinnerTo;
+    private Spinner spinnerCar;
     private Button buttonOrderTaxi;
     private Activity rootView;
 
@@ -31,6 +32,9 @@ public class TaxiFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_taxi, container, false);
         spinnerFrom = (Spinner) rootView.findViewById(R.id.spinner_from_taxi_fragment);
+        spinnerTo = (Spinner) rootView.findViewById(R.id.spinner_destination_fragment_taxi);
+        spinnerCar = (Spinner) rootView.findViewById(R.id.spinner_typeOfCar_fragment_taxi);
+
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

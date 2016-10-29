@@ -48,7 +48,6 @@ public class ExcursionDetailActivity extends AppCompatActivity {
 
         helper = new MySQLiteHelper(this);
 
-
             cursor = helper.getReadableDatabase().query(
                     ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
                     null,
@@ -66,7 +65,6 @@ public class ExcursionDetailActivity extends AppCompatActivity {
                 contentExcursionDetail.setText(Html.fromHtml(content));
                 cursor.close();
         }
-
 
         Cursor imagesCursor = helper.getReadableDatabase().query(
                 ImagesDetailTable.TABLE_IMAGESDETAIL,
@@ -92,7 +90,6 @@ public class ExcursionDetailActivity extends AppCompatActivity {
 
         ImagesDetailPagerAdapter pagerAdapter = new ImagesDetailPagerAdapter(getSupportFragmentManager(), urls);
         viewPagerDetail.setAdapter(pagerAdapter);
-
     }
 
     private class ImagesDetailPagerAdapter extends FragmentStatePagerAdapter {
@@ -116,6 +113,7 @@ public class ExcursionDetailActivity extends AppCompatActivity {
         public int getCount() {
             return adapterUrls.size();
         }
+
     }
 }
 
