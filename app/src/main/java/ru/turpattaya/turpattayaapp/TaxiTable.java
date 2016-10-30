@@ -7,7 +7,7 @@ public class TaxiTable {
 
     public static final String TABLE_TAXI = "TaxiTable";
     public static final String COLOMN_TAXI_ID = "_id";
-    public static final String COLOMN_TAXI_WHEREFROM = "wherefrom";
+    public static final String COLOMN_TAXI_FROM = "from";
     public static final String COLOMN_TAXI_DESTINATION = "destination";
     public static final String COLOMN_TAXI_PRICESMALCAR = "priceSmalCar";
     public static final String COLOMN_TAXI_PRICEINOVACAR = "priceInovaCar";

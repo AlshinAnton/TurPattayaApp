@@ -1,8 +1,6 @@
 package ru.turpattaya.turpattayaapp;
 
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -27,8 +25,7 @@ public class TaxiFragment extends Fragment {
 
     public TaxiFragment() {        // Required empty public constructor
     }
-
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -44,11 +41,11 @@ public class TaxiFragment extends Fragment {
         spinnerCar.setPrompt("Тип машины");
 
         spinnerFrom.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-/*        spinnerTo.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+        spinnerTo.setOnItemSelectedListener(new CustomOnItemSelectedListener());
         spinnerCar.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-        buttonOrderTaxi.setOnClickListener(new CustomOnClickListener());*/
+        buttonOrderTaxi.setOnClickListener(new CustomOnClickListener());
 
-        spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(parent.getContext(),
@@ -60,21 +57,17 @@ public class TaxiFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
+        });*/
         return rootView;
     }
-
-
 
     @Override
     public void onStart() {
         super.onStart();
-
         addItemsOnSpinner();
     }
+
     public void addItemsOnSpinner() {
-
-
         ArrayAdapter<CharSequence> adapterFrom = ArrayAdapter.createFromResource(getActivity(), R.array.spinnerfrom, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapterTo = ArrayAdapter.createFromResource(getActivity(), R.array.spinnerto, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> adapterCar = ArrayAdapter.createFromResource(getActivity(), R.array.spinnerTypeOfCar, android.R.layout.simple_spinner_item);
@@ -85,9 +78,6 @@ public class TaxiFragment extends Fragment {
         spinnerFrom.setAdapter(adapterFrom);
         spinnerTo.setAdapter(adapterTo);
         spinnerCar.setAdapter(adapterCar);
-
-
-
     }
 
 
