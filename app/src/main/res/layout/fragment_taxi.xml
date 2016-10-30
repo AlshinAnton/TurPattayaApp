@@ -7,7 +7,7 @@
     tools:context="ru.turpattaya.turpattayaapp.TaxiFragment">
 
         <TextView
-            android:id="@+id/text1_fragment_taxi"
+            android:id="@+id/title_fragment_taxi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -16,10 +16,10 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/text2_fragment_taxi"
+            android:id="@+id/content_fragment_taxi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text1_fragment_taxi"
+            android:layout_below="@+id/title_fragment_taxi"
             android:layout_centerHorizontal="true"
             android:padding="5dp"
             android:text="Компания Turpattaya осуществляет трансферы по Тайланду, встречи и проводы в аэропорты. Мы приезжаем ВСЕГДА ВОВРЕМЯ!" />
@@ -32,10 +32,9 @@
             android:layout_centerHorizontal="true"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/text2_fragment_taxi"
+            android:layout_below="@+id/content_fragment_taxi"
             android:layout_marginTop="5dp"
             android:entries="@array/spinnerfrom"
-            android:prompt="Откуда"
             android:spinnerMode="dialog"/>
 
 
@@ -63,6 +62,15 @@
             android:spinnerMode="dialog">
 
         </Spinner>
+
+        <TextView
+            android:id="@+id/priceResult_fragment_taxi"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="30dp"
+            android:layout_below="@+id/spinner_typeOfCar_fragment_taxi"/>
 
         <Button
             android:id="@+id/btn_taxi_order"
