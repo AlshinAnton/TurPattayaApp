@@ -101,7 +101,7 @@ public class TaxiFragment extends Fragment {
     private void finish() {
         // TODO Auto-generated method stub
     }
-*/
+
 
 
 
