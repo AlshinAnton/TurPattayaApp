@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
  */
 
 public class TaxiFromTable {
+    public static final String TABLE_TAXIFROMTABLE = "TaxiFromTable";
     public static final String COLUMN_TAXIFROM_ID = "_id";
     public static final String COLUMN_TAXIFROM_FROMCODE = "fromCode";
     public static final String COLUMN_TAXIFROM_FROMRUSSIANNAME = "fromRussianName";

@@ -110,8 +110,8 @@ public class TaxiFragment extends Fragment {
 
     private String calculatePrice() {
         Cursor cursor = null;
-        String from;
-        String destination;
+        String fromcode;
+        String destinationcode;
 
 
         MySQLiteHelper helper = new MySQLiteHelper(getActivity());
@@ -119,7 +119,7 @@ public class TaxiFragment extends Fragment {
         cursor = helper.getReadableDatabase().query(
                 TaxiTable.TABLE_TAXI,
                 null,
-                TaxiTable.COLOMN_TAXI_FROM + " like ? and " + TaxiTable.COLOMN_TAXI_DESTINATION + " like ? ",
+                TaxiTable.COLOMN_TAXI_FROMCODE + " like ? and " + TaxiTable.COLOMN_TAXI_DESTINATIONCODE + " like ? ",
                 new String[]{"2", "3"},
                 null,
                 null,
