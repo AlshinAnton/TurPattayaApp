@@ -22,7 +22,6 @@ public class TaxiFragment extends Fragment {
     private Spinner spinnerCar;
     private TextView priceRezult;
     private Button buttonOrderTaxi;
-    SimpleCursorAdapter spinnerFromAdapter;
 
 /*    private ArrayList listTaxiFrom;
     private ArrayList listTaxiDestination;

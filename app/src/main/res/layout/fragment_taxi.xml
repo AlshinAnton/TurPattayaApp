@@ -34,7 +34,6 @@
             android:layout_height="40dp"
             android:layout_below="@+id/content_fragment_taxi"
             android:layout_marginTop="5dp"
-            android:entries="@array/spinnerfrom"
             android:spinnerMode="dialog"/>
 
 
@@ -46,7 +45,6 @@
             android:layout_height="40dp"
             android:layout_below="@+id/spinner_from_taxi_fragment"
             android:layout_marginTop="5dp"
-            android:entries="@array/spinnerto"
             android:spinnerMode="dialog">
 
         </Spinner>
@@ -58,7 +56,6 @@
             android:layout_height="40dp"
             android:layout_below="@+id/spinner_destination_fragment_taxi"
             android:layout_marginTop="5dp"
-            android:entries="@array/spinnerTypeOfCar"
             android:spinnerMode="dialog">
 
         </Spinner>
