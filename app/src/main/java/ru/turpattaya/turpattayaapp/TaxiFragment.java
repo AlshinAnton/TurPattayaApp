@@ -4,16 +4,17 @@ package ru.turpattaya.turpattayaapp;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 
 
 public class TaxiFragment extends Fragment {
@@ -42,13 +43,61 @@ public class TaxiFragment extends Fragment {
         priceRezult = (TextView) rootView.findViewById(R.id.priceResult_fragment_taxi);
         buttonOrderTaxi = (Button) rootView.findViewById(R.id.btn_taxi_order);
 
-
-
-
-
         spinnerFrom.setPrompt("Откуда");
         spinnerTo.setPrompt("Куда");
         spinnerCar.setPrompt("Тип машины");
+
+        MySQLiteHelper helper = new MySQLiteHelper(getActivity());
+
+        Cursor cursor = helper.getReadableDatabase().query(
+                TaxiFromTable.TABLE_TAXIFROMTABLE,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        ArrayList<String> fromArray = new ArrayList<>();
+
+        if (cursor.moveToFirst()) {
+            while (!cursor.isAfterLast()) {
+                fromArray.add(cursor.getString(cursor.getColumnIndexOrThrow(TaxiFromTable.COLUMN_TAXIFROM_FROMRUSSIANNAME)));
+                cursor.moveToNext();
+            }
+            cursor.close();
+        }
+
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, fromArray); //selected item will look like a spinner set from XML
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerFrom.setAdapter(spinnerArrayAdapter);
+
+        Cursor cursorDestination = helper.getReadableDatabase().query(
+                TaxiDestinationTable.TABLE_TAXIDESTINATIONTABLE,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        ArrayList<String> destinationArray = new ArrayList<>();
+
+        if (cursor.moveToFirst()) {
+            while (!cursor.isAfterLast()) {
+                destinationArray.add(cursor.getString(cursor.getColumnIndexOrThrow(TaxiDestinationTable.COLUMN_TAXIDESTINATION_DESTINATIONRUSSIANNAME)));
+                cursor.moveToNext();
+            }
+            cursor.close();
+        }
+
+        spinnerArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, destinationArray); //selected item will look like a spinner set from XML
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTo.setAdapter(spinnerArrayAdapter);
 
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -96,7 +145,6 @@ public class TaxiFragment extends Fragment {
     }
 
 
-
     private void finish() {
         // TODO Auto-generated method stub
     }
@@ -133,7 +181,7 @@ public class TaxiFragment extends Fragment {
 
 
 
-/*    private void loadSpinnerData() {
+    /*private void loadSpinnerData() {
         listTaxiFrom = new ArrayList<String>();
         helper.getReadableDatabase();
 
@@ -153,10 +201,8 @@ public class TaxiFragment extends Fragment {
         }
         taxiFromCursor.close();
         helper.close();   // Закрываем БД
-    }*/
+    }
 
-
-/*
     @Override
     public void onStart() {
         super.onStart();
@@ -176,9 +222,6 @@ public class TaxiFragment extends Fragment {
         spinnerTo.setAdapter(adapterTo);
         spinnerCar.setAdapter(adapterCar);
     }*/
-/*
- */
-/*
 
 
 
@@ -188,7 +231,8 @@ public class TaxiFragment extends Fragment {
 
 
 
- String[] listTaxiFrom = new String[] {"_id", "from"};
+
+ /*String[] listTaxiFrom = new String[] {"_id", "from"};
         helper = new MySQLiteHelper(getActivity());
 
         spinnerFromAdapter = new SimpleCursorAdapter(getActivity(),
@@ -221,4 +265,5 @@ public Loader<Cursor> onCreateLoader(int arg0, Bundle arg1) {
     @Override
     public void onLoaderReset(Loader arg0) {
 
-    }*/
+    }*//*
+*/
