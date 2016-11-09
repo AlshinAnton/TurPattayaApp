@@ -41,6 +41,7 @@
         <Spinner
             android:id="@+id/spinner_destination_fragment_taxi"
             android:layout_width="350dp"
+            android:clickable="false"
             android:layout_centerHorizontal="true"
             android:layout_height="40dp"
             android:layout_below="@+id/spinner_from_taxi_fragment"
@@ -56,6 +57,7 @@
             android:layout_height="40dp"
             android:layout_below="@+id/spinner_destination_fragment_taxi"
             android:layout_marginTop="5dp"
+            android:clickable="false"
             android:spinnerMode="dialog">
 
         </Spinner>
