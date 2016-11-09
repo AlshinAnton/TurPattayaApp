@@ -12,8 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -30,16 +28,13 @@ public class TaxiFragment extends Fragment {
     HashMap<String, String> destinationPares;
     ArrayList<String> destinationArray;
 
-
     MySQLiteHelper helper;
 
-
-    public TaxiFragment() {        // Required empty public constructor
+    public TaxiFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_taxi, container, false);
         spinnerFrom = (Spinner) rootView.findViewById(R.id.spinner_from_taxi_fragment);
         spinnerTo = (Spinner) rootView.findViewById(R.id.spinner_destination_fragment_taxi);
@@ -47,13 +42,7 @@ public class TaxiFragment extends Fragment {
         priceRezult = (TextView) rootView.findViewById(R.id.priceResult_fragment_taxi);
         buttonOrderTaxi = (Button) rootView.findViewById(R.id.btn_taxi_order);
 
-        spinnerFrom.setPrompt("Откуда");
-        spinnerTo.setPrompt("Куда");
-        spinnerCar.setPrompt("Тип машины");
-
         helper = new MySQLiteHelper(getActivity());
-
-
 
         Cursor cursor = helper.getReadableDatabase().query(
                 TaxiFromTable.TABLE_TAXIFROMTABLE,
@@ -67,9 +56,7 @@ public class TaxiFragment extends Fragment {
         );
 
         ArrayList<String> fromArray = new ArrayList<>();
-
         fromPares = new HashMap<>();
-
         fromArray.add("Выберите откуда");
 
         if (cursor.moveToFirst()) {
@@ -89,12 +76,6 @@ public class TaxiFragment extends Fragment {
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFrom.setAdapter(spinnerArrayAdapter);
 
-
-
-
-
-
-
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -113,45 +94,55 @@ public class TaxiFragment extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
 
         spinnerTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                String selectedText = parent.getItemAtPosition(position).toString();
+                if (selectedText.contains("Выберите")) {
+                    spinnerCar.setClickable(false);
+                    return;
+                }
+                if (destinationPares.containsKey(selectedText)) {
+                    /*String selectedCode = destinationPares.get(selectedText);
+                    fillDestinationSpinner(selectedCode);*/
+                    spinnerCar.setClickable(true);
+                }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.spinner_car_type, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerCar.setAdapter(adapter);
 
         spinnerCar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(parent.getContext(),
-                        "OnItemSelectedListener : " + parent.getItemAtPosition(position).toString(),
-                        Toast.LENGTH_SHORT).show();
+                switch (view.getId()) {
+
+                }
+                /*calculatePrice();*/
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
         return rootView;
     }
-
 
     private void finish() {
         // TODO Auto-generated method stub
     }
 
     private void fillDestinationSpinner(String fromCode) {
-
         destinationArray = new ArrayList<>();
         destinationArray.add("Выберите куда");
         destinationPares = new HashMap<>();
@@ -160,7 +151,6 @@ public class TaxiFragment extends Fragment {
         LEFT OUTER JOIN TaxiDestinationTable tdt
         ON tdt.destinationCode = tt.destinationCode
         WHERE tt.fromCode like '0'   */
-
 
         StringBuilder sb = new StringBuilder();
         sb.append("SELECT tdt.destinationCode, tdt.destinationRussianName FROM ")
@@ -185,23 +175,15 @@ public class TaxiFragment extends Fragment {
 
         cursor.close();
 
-        ArrayAdapter spinnerArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, destinationArray); //selected item will look like a spinner set from XML
+        ArrayAdapter spinnerArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, destinationArray);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTo.setAdapter(spinnerArrayAdapter);
-
-
-
     }
-
-
-
-
-
 
     private String calculatePrice() {
         Cursor cursor = null;
-        String fromcode;
-        String destinationcode;
+        /*String fromcode;
+        String destinationcode;*/
 
 
         helper = new MySQLiteHelper(getActivity());

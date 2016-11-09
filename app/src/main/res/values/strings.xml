@@ -10,6 +10,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_excursion_detail">ExcursionDetailActivity</string>
 
-
+    <string-array name="spinner_car_type">
+        <item>Выберите тип машины</item>
+        <item>Легковая</item>
+        <item>Минивэн</item>
+        <item>Микроавтобус</item>
+    </string-array>
 
 </resources>
