@@ -28,6 +28,10 @@ public class TaxiFragment extends Fragment {
     HashMap<String, String> destinationPares;
     ArrayList<String> destinationArray;
 
+    String destinationCode="";
+    String fromCode="";
+    int colomnIndex=-1;
+
     MySQLiteHelper helper;
     String car;
 
@@ -88,6 +92,7 @@ public class TaxiFragment extends Fragment {
                 }
                 if (fromPares.containsKey(selectedText)) {
                     String selectedCode = fromPares.get(selectedText);
+                    fromCode = fromPares.get(selectedText);
                     fillDestinationSpinner(selectedCode);
                     spinnerTo.setClickable(true);
                 }
@@ -107,7 +112,9 @@ public class TaxiFragment extends Fragment {
                     return;
                 }
                 if (destinationPares.containsKey(selectedText)) {
+                    destinationCode = destinationPares.get(selectedText);
                     spinnerCar.setClickable(true);
+
                 }
             }
 
@@ -121,19 +128,20 @@ public class TaxiFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCar.setAdapter(adapter);
 
+
         spinnerCar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-/*               if (car.equals("Легковая")) {
-                   String colomnName = cursor.getString(cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICESMALCAR));
+               if (car.equals("Легковая")) {
+                   colomnIndex = cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICESMALCAR);
                    calculatePrice();
                } else if (car.equals("Минивэн")) {
-                   String colomnName = cursor.getString(cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEINOVACAR));
+                   colomnIndex = cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEINOVACAR);
                    calculatePrice();
                } else if (car.equals("Микроавтобус")) {
-                   String colomnName = cursor.getString(cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR));
+                   colomnIndex = cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR);
                    calculatePrice();
-               }*/
+               }
             }
 
             @Override
@@ -188,6 +196,7 @@ public class TaxiFragment extends Fragment {
     private String calculatePrice() {
         Cursor cursor = null;
 
+
         helper = new MySQLiteHelper(getActivity());
 
         cursor = helper.getReadableDatabase().query(
@@ -201,7 +210,14 @@ public class TaxiFragment extends Fragment {
                 null
         );
 
-        return null;
+        if (!cursor.moveToFirst()) return "";
+
+        String value = cursor.getString(colomnIndex);
+        cursor.close();
+
+        priceRezult.setText(value==null? "" : value);
+
+        return value;
     }
 
 
