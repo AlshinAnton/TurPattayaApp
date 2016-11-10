@@ -80,11 +80,11 @@ public class ExcursionsListFragment extends Fragment  {
         super.onPause();
     }
 
-    public static void handleSearch(final MenuItem item) {
+   /* public static void handleSearch(final MenuItem item) {
 
         final SearchView searchView = (SearchView) item.getActionView();
 
-        /*searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {   //как сделать так чтобы он по мере добавления букв фильтровал нашу
+        *//*searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {   //как сделать так чтобы он по мере добавления букв фильтровал нашу
                                                                                     базу и соответственно при удалении искал по оставшимся буквам в поиске...?
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -94,7 +94,7 @@ public class ExcursionsListFragment extends Fragment  {
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
-        });*/
+        });*//*
 
         final EditText et = (EditText) searchView.findViewById(R.id.search_src_text);
 
@@ -116,12 +116,12 @@ public class ExcursionsListFragment extends Fragment  {
                             selection = ExcursionTable.COLUMN_EXCURSION_PAGETITLE + " like '%" + query + "%'";// выглядит пимерно так : select * from
                             likeQuery = query;
                         }
-                        /*updateAdapterCursor();*/
+                        *//*updateAdapterCursor();*//*
                         return true;
                     }
                     return false;
                 }
             });
         }
-    }
+    }*/
 }

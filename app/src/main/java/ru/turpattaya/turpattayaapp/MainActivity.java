@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         viewPagerTabs = (ViewPager) findViewById(R.id.viewPager);
-        searchView = (SearchView) findViewById(R.id.search_excursion);
+        /*searchView = (SearchView) findViewById(R.id.search_excursion);*/
 
         setupViewPager(viewPagerTabs);// будет добавлять объекты в адаптер
         tabLayout.setupWithViewPager(viewPagerTabs);
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+       /* switch (item.getItemId()) {
             case R.id.menu_search_excursion:
                 ExcursionsListFragment.handleSearch(item);
                 return true;
@@ -149,12 +149,11 @@ public class MainActivity extends AppCompatActivity
                 return true;
             case R.id.menu_sort_descending:
                 orderBy = AnimalsTable.COLUMN_ANIMAL+ " desc";
-                updateAdapterCursor();
+                updateAdapterCursor();*/
                 return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+
 
 
     @SuppressWarnings("StatementWithEmptyBody")
