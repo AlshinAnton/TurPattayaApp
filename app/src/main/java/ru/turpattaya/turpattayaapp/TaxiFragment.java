@@ -208,7 +208,7 @@ public class TaxiFragment extends Fragment {
                 TaxiTable.TABLE_TAXI,
                 null,
                 TaxiTable.COLOMN_TAXI_FROMCODE + " like ? and " + TaxiTable.COLOMN_TAXI_DESTINATIONCODE + " like ? ",
-                new String[]{"fromcode", "destinationcode"},
+                new String[]{fromCode, destinationCode},
                 null,
                 null,
                 null,
