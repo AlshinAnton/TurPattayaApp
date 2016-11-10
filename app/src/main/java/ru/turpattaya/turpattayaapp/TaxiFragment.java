@@ -33,7 +33,7 @@ public class TaxiFragment extends Fragment {
     int colomnIndex=-1;
 
     MySQLiteHelper helper;
-    String car;
+
 
     public TaxiFragment() {
     }
@@ -48,6 +48,8 @@ public class TaxiFragment extends Fragment {
         buttonOrderTaxi = (Button) rootView.findViewById(R.id.btn_taxi_order);
 
         helper = new MySQLiteHelper(getActivity());
+        destinationArray = new ArrayList<>();
+        destinationArray.add("Выберите куда");
 
         final Cursor cursor = helper.getReadableDatabase().query(
                 TaxiFromTable.TABLE_TAXIFROMTABLE,
@@ -132,15 +134,18 @@ public class TaxiFragment extends Fragment {
         spinnerCar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String car = parent.getItemAtPosition(position).toString(); // так мы достаем из спиннера текст выбранный
                if (car.equals("Легковая")) {
-                   colomnIndex = cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICESMALCAR);
-                   calculatePrice();
+                   String colomn = TaxiTable.COLOMN_TAXI_PRICESMALCAR;
+
+                   calculatePrice(colomn);
                } else if (car.equals("Минивэн")) {
-                   colomnIndex = cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEINOVACAR);
-                   calculatePrice();
+                   String colomn = TaxiTable.COLOMN_TAXI_PRICEINOVACAR;
+                   calculatePrice(colomn);
                } else if (car.equals("Микроавтобус")) {
-                   colomnIndex = cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR);
-                   calculatePrice();
+                   String colomn = TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR;
+
+                   calculatePrice(colomn);
                }
             }
 
@@ -193,7 +198,7 @@ public class TaxiFragment extends Fragment {
         spinnerTo.setAdapter(spinnerArrayAdapter);
     }
 
-    private String calculatePrice() {
+    private String calculatePrice(String colomnName) {
         Cursor cursor = null;
 
 
@@ -212,14 +217,12 @@ public class TaxiFragment extends Fragment {
 
         if (!cursor.moveToFirst()) return "";
 
-        String value = cursor.getString(colomnIndex);
+        String value = cursor.getString(cursor.getColumnIndexOrThrow(colomnName));
         cursor.close();
 
         priceRezult.setText(value==null? "" : value);
 
         return value;
     }
-
-
 
 }
