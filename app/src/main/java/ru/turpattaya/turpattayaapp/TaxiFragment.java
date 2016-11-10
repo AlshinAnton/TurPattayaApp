@@ -29,6 +29,7 @@ public class TaxiFragment extends Fragment {
     ArrayList<String> destinationArray;
 
     MySQLiteHelper helper;
+    String car;
 
     public TaxiFragment() {
     }
@@ -44,7 +45,7 @@ public class TaxiFragment extends Fragment {
 
         helper = new MySQLiteHelper(getActivity());
 
-        Cursor cursor = helper.getReadableDatabase().query(
+        final Cursor cursor = helper.getReadableDatabase().query(
                 TaxiFromTable.TABLE_TAXIFROMTABLE,
                 null,
                 null,
@@ -106,8 +107,6 @@ public class TaxiFragment extends Fragment {
                     return;
                 }
                 if (destinationPares.containsKey(selectedText)) {
-                    /*String selectedCode = destinationPares.get(selectedText);
-                    fillDestinationSpinner(selectedCode);*/
                     spinnerCar.setClickable(true);
                 }
             }
@@ -125,10 +124,16 @@ public class TaxiFragment extends Fragment {
         spinnerCar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               /* switch (view.getId()) {
-
-                }*/
-                /*calculatePrice();*/
+/*               if (car.equals("Легковая")) {
+                   String colomnName = cursor.getString(cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICESMALCAR));
+                   calculatePrice();
+               } else if (car.equals("Минивэн")) {
+                   String colomnName = cursor.getString(cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEINOVACAR));
+                   calculatePrice();
+               } else if (car.equals("Микроавтобус")) {
+                   String colomnName = cursor.getString(cursor.getColumnIndexOrThrow(TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR));
+                   calculatePrice();
+               }*/
             }
 
             @Override
@@ -182,9 +187,6 @@ public class TaxiFragment extends Fragment {
 
     private String calculatePrice() {
         Cursor cursor = null;
-        /*String fromcode;
-        String destinationcode;*/
-
 
         helper = new MySQLiteHelper(getActivity());
 
@@ -192,14 +194,16 @@ public class TaxiFragment extends Fragment {
                 TaxiTable.TABLE_TAXI,
                 null,
                 TaxiTable.COLOMN_TAXI_FROMCODE + " like ? and " + TaxiTable.COLOMN_TAXI_DESTINATIONCODE + " like ? ",
-                new String[]{"2", "3"},
+                new String[]{"fromcode", "destinationcode"},
                 null,
                 null,
                 null,
                 null
         );
+
         return null;
     }
+
 
 
 }

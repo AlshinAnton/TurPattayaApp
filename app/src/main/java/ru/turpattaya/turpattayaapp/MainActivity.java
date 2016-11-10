@@ -1,16 +1,14 @@
 package ru.turpattaya.turpattayaapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.percent.PercentRelativeLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.SearchView;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,10 +18,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,12 +38,15 @@ public class MainActivity extends AppCompatActivity
     private List<Excursion> data = new ArrayList<>();
     private ExcursionAdapter adapter;
 
+    SearchView searchView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         viewPagerTabs = (ViewPager) findViewById(R.id.viewPager);
+        searchView = (SearchView) findViewById(R.id.search_excursion);
 
         setupViewPager(viewPagerTabs);// будет добавлять объекты в адаптер
         tabLayout.setupWithViewPager(viewPagerTabs);
@@ -80,16 +82,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-/*    public void startDetailActivity(View view) {
-        PercentRelativeLayout percentRelativeLayout  = (PercentRelativeLayout) view.findViewById(R.id.container);
-        percentRelativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ExcursionDetailActivity.class);
-                startActivity(intent);
-            }
-        });
-    }*/
+
 
     static class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -124,11 +117,14 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+            drawer.closeDrawer(GravityCompat.START); }
+            if (!searchView.isIconified()) {
+                searchView.setIconified(true);
         } else {
             super.onBackPressed();
         }
@@ -143,18 +139,23 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.menu_search_excursion:
+                ExcursionsListFragment.handleSearch(item);
+                return true;
+            case R.id.menu_sort_ascending:
+                orderBy = AnimalsTable.COLUMN_ANIMAL+ " asc";
+                updateAdapterCursor();
+                return true;
+            case R.id.menu_sort_descending:
+                orderBy = AnimalsTable.COLUMN_ANIMAL+ " desc";
+                updateAdapterCursor();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -180,4 +181,5 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
