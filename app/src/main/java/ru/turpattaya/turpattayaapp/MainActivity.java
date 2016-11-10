@@ -162,17 +162,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        if (id == R.id.nav_excursions) {
+            /*Intent intent = new Intent(this, ExcursionActivity.class);
+            startActivity(intent);*/
+        } else if (id == R.id.nav_taxi) {
+        } else if (id == R.id.nav_transfers) {
+        } else if (id == R.id.nav_myFavorite) {
+        } else if (id == R.id.nav_rates) {
+        } else if (id == R.id.nav_weather) {
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_contacts) {
+        } else if (id == R.id.nav_aboutUs) {
 
         }
 
