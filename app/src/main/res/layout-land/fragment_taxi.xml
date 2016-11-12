@@ -7,7 +7,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         tools:context="ru.turpattaya.turpattayaapp.TaxiFragment">
 
         <TextView
@@ -15,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Такси"
             android:textSize="30sp" />
 
@@ -35,7 +34,6 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_below="@+id/content_fragment_taxi"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:spinnerMode="dialog" />
 
@@ -45,7 +43,6 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_below="@+id/spinner_from_taxi_fragment"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:clickable="false"
             android:spinnerMode="dialog">
@@ -57,33 +54,34 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_below="@+id/spinner_destination_fragment_taxi"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:clickable="false"
             android:spinnerMode="dialog">
 
         </Spinner>
 
-        <TextView
-            android:id="@+id/priceResult_fragment_taxi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner_typeOfCar_fragment_taxi"
-            android:layout_centerHorizontal="true"
-            android:paddingTop="30dp"
-            android:textSize="20sp" />
-
         <Button
             android:id="@+id/btn_taxi_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/priceResult_fragment_taxi"
+            android:layout_below="@+id/spinner_typeOfCar_fragment_taxi"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="15dp"
             android:onClick="orderTAXI"
             android:text="ЗАКАЗАТЬ"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/priceResult_fragment_taxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:paddingStart="40dp"
+            android:layout_above="@+id/spinner_typeOfCar_fragment_taxi"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/spinner_from_taxi_fragment"
+            android:layout_below="@+id/spinner_from_taxi_fragment" />
 
     </RelativeLayout>
 </ScrollView>

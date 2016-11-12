@@ -220,7 +220,8 @@ public class TaxiFragment extends Fragment {
         String value = cursor.getString(cursor.getColumnIndexOrThrow(colomnName));
         cursor.close();
 
-        priceRezult.setText(value==null? "" : value);
+        priceRezult.setText(value==null? "" : value + " Бат");
+
 
         return value;
     }
