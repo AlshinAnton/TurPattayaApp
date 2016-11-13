@@ -24,6 +24,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+import com.mikepenz.materialdrawer.Drawer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +43,14 @@ public class MainActivity extends AppCompatActivity
 
     SearchView searchView;
 
+/*    private Drawer.Result drawerResult = null;*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+      /*  setTheme(R.style.AppThemeDrawer);*/
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -55,6 +64,11 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setLogo(R.drawable.logo);
+
+        /*drawerResult = UtilsDrawer.createCommonDrawer(MainActivity.this, toolbar);
+        drawerResult.setSelectionByIdentifier(1, false); // Set proper selection
+        drawerResult.openDrawer();*/
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -123,6 +137,9 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START); }
+/*        if (drawerResult.isDrawerOpen()) {
+            // Закрываем меню, если оно показано и при этом нажата системная кнопка "Назад"
+            drawerResult.closeDrawer();*/
             if (!searchView.isIconified()) {
                 searchView.setIconified(true);
         } else {
