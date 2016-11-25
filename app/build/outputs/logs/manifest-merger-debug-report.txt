@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:9:5-38:19
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:9:5-34:19
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
@@ -54,7 +54,7 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:label
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:17:13-45
 	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:18:13-56
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:18:13-50
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -68,37 +68,23 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:22:27-74
 activity#ru.turpattaya.turpattayaapp.ExcursionDetailActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:25:9-28:59
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:25:9-28:52
 	android:label
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:27:13-68
 	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:28:13-50
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:26:13-52
 activity#ru.turpattaya.turpattayaapp.OrderForm
 ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:29:9-47
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:29:19-44
-activity#ru.turpattaya.turpattayaapp.FancySpinner
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:30:9-32:68
-	android:label
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:13-65
-	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:13-41
-activity#ru.turpattaya.turpattayaapp.ExcursionListActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:33:9-35:69
-	android:label
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:13-66
-	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:34:13-50
-activity#ru.turpattaya.turpattayaapp.TaxiActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:36:9-50
-	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:36:19-47
 activity#ru.turpattaya.turpattayaapp.BaseActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:9-59
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:9-33:20
+	android:theme
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:13-50
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:19-47
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:19-47
 uses-sdk
 INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:20:5-43

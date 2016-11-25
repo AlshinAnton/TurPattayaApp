@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class TaxiActivity extends Activity {
+public class TaxiActivity extends BaseActivity {
 
     private Spinner spinnerFrom;
     private Spinner spinnerTo;
