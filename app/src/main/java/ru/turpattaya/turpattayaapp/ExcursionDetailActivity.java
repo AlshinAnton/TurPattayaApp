@@ -46,24 +46,25 @@ public class ExcursionDetailActivity extends AppCompatActivity {
         viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
         viewPagerDetail.setPageTransformer(true, new ImagesDetailAnimation());
 
+
         helper = new MySQLiteHelper(this);
 
-            cursor = helper.getReadableDatabase().query(
-                    ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
-                    null,
-                    ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_EXCURSIONID + " =?",
-                    new String[]{String.valueOf(id)},
-                    null,
-                    null,
-                    null,
-                    null
-            );
-            if (cursor != null && cursor.moveToFirst()) {
-                String title = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE));
-                pagetitleExcursionDetail.setText(Html.fromHtml(title));
-                String content = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT));
-                contentExcursionDetail.setText(Html.fromHtml(content));
-                cursor.close();
+        cursor = helper.getReadableDatabase().query(
+                ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
+                null,
+                ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_EXCURSIONID + " =?",
+                new String[]{String.valueOf(id)},
+                null,
+                null,
+                null,
+                null
+        );
+        if (cursor != null && cursor.moveToFirst()) {
+            String title = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_PAGETITLE));
+            pagetitleExcursionDetail.setText(Html.fromHtml(title));
+            String content = cursor.getString(cursor.getColumnIndex(ExcursionDetailTable.COLUMN_EXCURSIONDETAIL_CONTENT));
+            contentExcursionDetail.setText(Html.fromHtml(content));
+            cursor.close();
         }
 
         Cursor imagesCursor = helper.getReadableDatabase().query(

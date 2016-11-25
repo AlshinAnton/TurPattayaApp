@@ -1,0 +1,7 @@
+#Fri Nov 25 20:08:11 ICT 2016
+base.0=C\:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_7ada6d7daa4e575cbae1e1769306ae2818cf4569
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_b5169e3588378ac21941b1bcad71b7ca8e628b1b\\classes.dex
+base.1=C\:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_b5169e3588378ac21941b1bcad71b7ca8e628b1b
+file.0=C\:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_7ada6d7daa4e575cbae1e1769306ae2818cf4569\\classes.dex

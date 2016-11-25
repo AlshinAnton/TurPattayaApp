@@ -26,7 +26,15 @@
             android:name=".ExcursionDetailActivity"
             android:label="@string/title_activity_excursion_detail"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OrderForm"></activity>
+        <activity android:name=".OrderForm" />
+        <activity
+            android:name=".FancySpinner"
+            android:label="@string/title_activity_fancy_spinner" />
+        <activity
+            android:name=".ExcursionListActivity"
+            android:label="@string/title_activity_excursion_list" />
+        <activity android:name=".TaxiActivity" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>

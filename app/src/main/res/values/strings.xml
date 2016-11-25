@@ -29,5 +29,7 @@
         <item>Минивэн</item>
         <item>Микроавтобус</item>
     </string-array>
+    <string name="title_activity_fancy_spinner">FancySpinner</string>
+    <string name="title_activity_excursion_list">ExcursionListActivity</string>
 
 </resources>

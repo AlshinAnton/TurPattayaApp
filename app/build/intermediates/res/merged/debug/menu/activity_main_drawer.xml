@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_excursions"
+            android:checked="true"
+            android:icon="@drawable/ic_pool_white_24dp"
+            android:title="Экскурсии" />
+
+        <item
+            android:id="@+id/nav_taxi"
+            android:checked="true"
+            android:title="Такси"
+            android:icon="@drawable/ic_local_taxi_white_24dp"/>
+
+        <item
+            android:id="@+id/nav_transfers"
+            android:checked="true"
+            android:title="Трансферы"
+            android:icon="@drawable/ic_directions_bus_white_24dp"/>
+
+        <item
+            android:id="@+id/nav_myFavorite"
+            android:checked="true"
+            android:title="Понравившиеся экскурсии"
+            android:icon="@drawable/ic_favorite_white_24dp"/>
+
+        <item
+            android:id="@+id/nav_rates"
+            android:checked="true"
+            android:title="Курсы валют"
+            android:icon="@drawable/ic_euro_symbol_white_24dp"/>
+
+        <item
+            android:id="@+id/nav_weather"
+            android:checked="true"
+            android:title="Погода в Паттайе"
+            android:icon="@drawable/ic_wb_sunny_white_24dp"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:checked="true"
+                android:title="Поделиться в социальных сетях"
+                android:icon="@drawable/ic_menu_share"/>
+            <item
+                android:id="@+id/nav_contacts"
+                android:checked="true"
+                android:title="Контакты"
+                android:icon="@drawable/ic_contact_phone_white_24dp"/>
+            <item
+                android:id="@+id/nav_aboutUs"
+                android:checked="true"
+                android:title="О нас"
+                android:icon="@drawable/ic_info_white_24dp"/>
+        </menu>
+    </item>
+
+</menu>

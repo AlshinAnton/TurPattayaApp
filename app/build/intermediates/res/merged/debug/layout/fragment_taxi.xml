@@ -1,0 +1,149 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:context="ru.turpattaya.turpattayaapp.TaxiFragment">
+
+        <TextView
+            android:id="@+id/title_fragment_taxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="Такси"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/content_fragment_taxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_fragment_taxi"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="Компания Turpattaya осуществляет трансферы по Тайланду, встречи и проводы в аэропорты. Мы приезжаем ВСЕГДА ВОВРЕМЯ!" />
+
+
+        <Spinner
+            android:id="@+id/spinner_from_taxi_fragment"
+            style="@style/Base.Theme.AppCompat.Dialog"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/content_fragment_taxi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:spinnerMode="dialog" />
+
+
+        <Spinner
+            android:id="@+id/spinner_destination_fragment_taxi"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/spinner_from_taxi_fragment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            android:spinnerMode="dialog">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinner_typeOfCar_fragment_taxi"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/spinner_destination_fragment_taxi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            android:spinnerMode="dialog">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/priceResult_fragment_taxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_typeOfCar_fragment_taxi"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="30dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_taxi_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceResult_fragment_taxi"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:onClick="orderTAXI"
+            android:text="ЗАКАЗАТЬ"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</ScrollView>
+
+    <!--<TextView
+        android:id="@+id/text1_fragment_taxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Такси"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/text2_fragment_taxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1_fragment_taxi"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="У нас вы можете заказать встречу в аэропорту бла блабла и все такое"/>
+    <LinearLayout
+        android:id="@+id/table_title_fragment_taxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text2_fragment_taxi"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/from_item_taxi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:hint="Откуда" />
+        <TextView
+            android:id="@+id/where_item_taxi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:hint="Куда"/>
+        <TextView
+            android:id="@+id/car_item_taxi"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:hint="Эконом" />
+        <TextView
+            android:id="@+id/minivan_item_taxi"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:hint="Минивэн" />
+        <TextView
+            android:id="@+id/minibus_item_taxi"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:hint="Минибас" />
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_taxi"
+        android:layout_below="@+id/table_title_fragment_taxi">
+    </ListView>-->

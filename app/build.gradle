@@ -34,4 +34,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     compile 'com.mikepenz.materialdrawer:library:2.9.8'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.ganfra:material-spinner:1.1.1'
+
 }

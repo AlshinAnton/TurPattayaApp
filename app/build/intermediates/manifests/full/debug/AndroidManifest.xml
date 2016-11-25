@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.turpattaya.turpattayaapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeDrawer" >
+        <activity
+            android:name="ru.turpattaya.turpattayaapp.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ru.turpattaya.turpattayaapp.ExcursionDetailActivity"
+            android:label="@string/title_activity_excursion_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="ru.turpattaya.turpattayaapp.OrderForm" />
+        <activity
+            android:name="ru.turpattaya.turpattayaapp.FancySpinner"
+            android:label="@string/title_activity_fancy_spinner" />
+        <activity
+            android:name="ru.turpattaya.turpattayaapp.ExcursionListActivity"
+            android:label="@string/title_activity_excursion_list" />
+        <activity android:name="ru.turpattaya.turpattayaapp.TaxiActivity" />
+        <activity android:name="ru.turpattaya.turpattayaapp.BaseActivity" />
+    </application>
+
+</manifest>

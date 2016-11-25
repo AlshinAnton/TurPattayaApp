@@ -51,6 +51,7 @@ public class TaxiFragment extends Fragment {
         destinationArray = new ArrayList<>();
         destinationArray.add("Выберите куда");
 
+
         final Cursor cursor = helper.getReadableDatabase().query(
                 TaxiFromTable.TABLE_TAXIFROMTABLE,
                 null,
@@ -82,6 +83,12 @@ public class TaxiFragment extends Fragment {
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, fromArray); //selected item will look like a spinner set from XML
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFrom.setAdapter(spinnerArrayAdapter);
+
+
+        // ПОКАЗАТЬ МАШЕ !!!!!!!!!!!!!!!! правильно ли я сделал?   косяк в том, что при повороте экрана , сбрасывается этот спиннер (пересоздается)
+        ArrayAdapter<String> spinnerArrayAdapter2 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, destinationArray); //selected item will look like a spinner set from XML
+        spinnerArrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTo.setAdapter(spinnerArrayAdapter2);
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -221,7 +228,6 @@ public class TaxiFragment extends Fragment {
         cursor.close();
 
         priceRezult.setText(value==null? "" : value + " Бат");
-
 
         return value;
     }
