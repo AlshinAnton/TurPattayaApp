@@ -22,7 +22,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ExcursionDetailActivity extends AppCompatActivity {
+public class ExcursionDetailActivity extends BaseActivity {
 
     Cursor cursor;
     MySQLiteHelper helper;
@@ -35,6 +35,7 @@ public class ExcursionDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppThemeDrawer);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excursion_detail);
 

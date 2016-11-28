@@ -18,11 +18,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeDrawer" >
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
             android:name="ru.turpattaya.turpattayaapp.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,14 +34,11 @@
             android:label="@string/title_activity_excursion_detail"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="ru.turpattaya.turpattayaapp.OrderForm" />
-        <activity
-            android:name="ru.turpattaya.turpattayaapp.FancySpinner"
-            android:label="@string/title_activity_fancy_spinner" />
-        <activity
-            android:name="ru.turpattaya.turpattayaapp.ExcursionListActivity"
-            android:label="@string/title_activity_excursion_list" />
         <activity android:name="ru.turpattaya.turpattayaapp.TaxiActivity" />
-        <activity android:name="ru.turpattaya.turpattayaapp.BaseActivity" />
+        <activity
+            android:name="ru.turpattaya.turpattayaapp.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

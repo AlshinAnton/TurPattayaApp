@@ -93,7 +93,7 @@ public class TaxiActivity extends Activity {
 
                 String selectedText = parent.getItemAtPosition(position).toString();
                 if (selectedText.contains("Выберите")) {
-                    spinnerTo.setClickable(false);
+                    /*spinnerTo.setClickable(false);*/
                     return;
                 }
                 if (fromPares.containsKey(selectedText)) {
@@ -114,7 +114,7 @@ public class TaxiActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedText = parent.getItemAtPosition(position).toString();
                 if (selectedText.contains("Выберите")) {
-                    spinnerCar.setClickable(false);
+                    /*spinnerCar.setClickable(false);*/
                     return;
                 }
                 if (destinationPares.containsKey(selectedText)) {
