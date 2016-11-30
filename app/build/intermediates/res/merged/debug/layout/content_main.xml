@@ -8,6 +8,9 @@
             layout="@layout/app_bar_main"
             android:id="@+id/appBar"/>
 
+        <include layout="@layout/navigation_view"
+            below/>
+
         <ListView
             android:id="@+id/list_excursion"
             android:layout_width="match_parent"
@@ -16,5 +19,5 @@
             android:paddingTop="10dp">
         </ListView>
 
-
+        <include layout="@layout/navigation_view"/>
 </RelativeLayout>
