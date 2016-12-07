@@ -6,6 +6,7 @@
     android:background="@color/colorPrimary"
     android:gravity="bottom"
     android:orientation="vertical"
+    android:layout_marginTop="@dimen/tool_bar_top_padding"
     android:paddingTop="@dimen/material_drawer_account_header_horizontal_top">
 
 

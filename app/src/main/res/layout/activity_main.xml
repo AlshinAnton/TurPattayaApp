@@ -9,17 +9,18 @@
     <include
         layout="@layout/app_bar_main"
         android:id="@+id/appBar"/>
-    <include layout="@layout/navigation_view"/>
+
 
     <ListView
         android:id="@+id/list_excursion"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/appBar"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:layout_marginTop="@dimen/material_drawer_item_profile">
     </ListView>
 
-
+    <include layout="@layout/navigation_view"/>
 
 
 

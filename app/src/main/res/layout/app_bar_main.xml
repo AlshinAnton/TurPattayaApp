@@ -2,9 +2,9 @@
 
 <android.support.design.widget.AppBarLayout
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:gravity="bottom"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:layout_marginTop="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -12,11 +12,11 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="?attr/actionBarSize"
-                theme="@style/AppTheme.NoActionBar">
+                android:layout_height="wrap_content">
 
-                <include layout="@layout/nav_header_main"/>
+                <include layout="@layout/nav_header_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </android.support.v7.widget.Toolbar>
 

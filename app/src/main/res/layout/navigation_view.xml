@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
+    android:paddingTop="@dimen/nav_header_vertical_spacing"
     app:headerLayout="@layout/app_bar_main"
-    app:menu="@menu/activity_main_drawer"
-
-
-    />
+    app:menu="@menu/activity_main_drawer"/>
