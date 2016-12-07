@@ -8,3 +8,12 @@
 /captures
 .externalNativeBuild
 /app/build
+/*/local.properties
+/*/out
+/*/*/build
+build
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
