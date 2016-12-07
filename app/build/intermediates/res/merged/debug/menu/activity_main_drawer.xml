@@ -15,12 +15,6 @@
             android:icon="@drawable/ic_local_taxi_white_24dp"/>
 
         <item
-            android:id="@+id/nav_transfers"
-            android:checked="true"
-            android:title="Трансферы"
-            android:icon="@drawable/ic_directions_bus_white_24dp"/>
-
-        <item
             android:id="@+id/nav_myFavorite"
             android:checked="true"
             android:title="Понравившиеся экскурсии"

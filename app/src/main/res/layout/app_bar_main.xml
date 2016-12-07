@@ -14,7 +14,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="?attr/actionBarSize"
-                theme="@style/ThemeOverlay.AppCompat.ActionBar">
+                theme="@style/AppTheme.NoActionBar">
 
                 <include layout="@layout/nav_header_main"/>
 

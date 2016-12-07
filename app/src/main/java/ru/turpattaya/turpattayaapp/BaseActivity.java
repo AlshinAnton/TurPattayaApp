@@ -37,6 +37,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
 
+
+
     }
 
     @Override
@@ -75,7 +77,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_taxi) {
             Intent intent = new Intent(this, TaxiActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_transfers) {
         } else if (id == R.id.nav_myFavorite) {
         } else if (id == R.id.nav_rates) {
         } else if (id == R.id.nav_weather) {

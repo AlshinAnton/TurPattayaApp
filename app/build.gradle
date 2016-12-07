@@ -35,5 +35,8 @@ dependencies {
     compile 'com.mikepenz.materialdrawer:library:2.9.8'
     testCompile 'junit:junit:4.12'
     compile 'com.github.ganfra:material-spinner:1.1.1'
+    compile('com.mikepenz.materialdrawer:library:0.9.5@aar') {
+        transitive = true
+    }
 
 }

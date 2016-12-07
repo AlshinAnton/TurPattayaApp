@@ -27,6 +27,7 @@
         android:layout_alignParentLeft="true"
         android:layout_margin="2dp"
         android:layout_alignParentBottom="true"
+        android:textSize="20sp"
         tools:text="здесь описание экскурсии , краткий вариант блаблабла, бла бла бла!!!" />
 
     <TextView

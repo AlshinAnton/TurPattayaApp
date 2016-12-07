@@ -104,9 +104,9 @@ MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\MSI\A
 MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:percent:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\percent\24.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ganfra:material-spinner:1.1.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.github.ganfra\material-spinner\1.1.1\AndroidManifest.xml:6:5-8:41
 MERGED from [com.mikepenz.materialdrawer:library:2.9.8] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.mikepenz.materialdrawer\library\2.9.8\AndroidManifest.xml:8:5-10:41
 MERGED from [com.mikepenz.iconics:library:1.0.0] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.mikepenz.iconics\library\1.0.0\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.ganfra:material-spinner:1.1.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.github.ganfra\material-spinner\1.1.1\AndroidManifest.xml:6:5-8:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
