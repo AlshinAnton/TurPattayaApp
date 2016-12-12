@@ -92,6 +92,10 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_drawer.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable\\ic_drawer.png"
+    },
+    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
@@ -158,6 +162,10 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_black_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable\\ic_menu_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",

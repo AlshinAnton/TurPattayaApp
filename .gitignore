@@ -7,11 +7,11 @@
 /build/generated
 /captures
 .externalNativeBuild
-/app/build
+app/build
 /*/local.properties
 /*/out
 /*/*/build
-build
+build/
 /*/*/production
 *.iml
 *.iws
