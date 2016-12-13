@@ -158,7 +158,6 @@ public class TaxiActivity extends BaseActivity {
     }
 
     public void finish() {
-        // TODO Auto-generated method stub
     }
 
     private void fillDestinationSpinner(String fromCode) {

@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import ru.turpattaya.turpattayaapp.CurrencyExchange.CurrencyExchangeActivity;
+
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -63,6 +65,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
         } else if (id == R.id.nav_myFavorite) {
         } else if (id == R.id.nav_rates) {
+            Intent intent = new Intent(this, CurrencyExchangeActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_weather) {
         } else if (id == R.id.nav_share) {
         } else if (id == R.id.nav_contacts) {

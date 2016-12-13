@@ -13,7 +13,7 @@ public class Utility {
 
     // выдергиваем курс доллара из HTML кода сгенерированного с помощью Build
     private static final String regexpRuble ="Russian Ruble\\s*</td><td class=\"D3\">(\\d+\\.\\d+)\\s*</td><td class=\"D4\">-</td><td class=\"D4\">-</td><td class=\"D4\">-</td><td class=\"D4\">-</td><td class=\"D5\">(\\d+\\.\\d+)";
-    private static final String regexpUSD1 ="USD\\s+:\\s+1\\s*</td><td class=\"D3\">(\\d+\\.\\d+)</td><td class=\"D4\">35.37</td><td class=\"D4\">35.37</td><td class=\"D4\">35.47</td><td class=\"D4\">35.77</td><td class=\"D5\">(\\d+\\.\\d+)";
+    private static final String regexpUSD1 ="USD : 1\\s*</td><td class=\"D3\">(\\d+\\.\\d+)</td><td class=\"D4\">35.37</td><td class=\"D4\">35.37</td><td class=\"D4\">35.47</td><td class=\"D4\">35.77</td><td class=\"D5\">(\\d+\\.\\d+)";
     /*private static final String regexpUSD5_20 ="USD : 5-20</td><td class=\"D3\">(\\d+\\.\\d+)</td><td class=\"D4\">35.37</td><td class=\"D4\">35.37</td><td class=\"D4\">35.47</td><td class=\"D4\">35.77</td><td class=\"D5\">(\\d+\\.\\d+)";
     private static final String regexpUSSD50_100 ="USD : 50-100</td><td class=\"D3\">(\\d+\\.\\d+)</td><td class=\"D4\">35.37</td><td class=\"D4\">35.37</td><td class=\"D4\">35.47</td><td class=\"D4\">35.77</td><td class=\"D5\">(\\d+\\.\\d+)";
     private static final String regexpEURO ="Euro</td><td class=\"D3\">(\\d+\\.\\d+)</td><td class=\"D4\">37.33041</td><td class=\"D4\">37.33041</td><td class=\"D4\">37.41625</td><td class=\"D4\">38.1925</td><td class=\"D5\">(\\d+\\.\\d+)";*/
@@ -86,5 +86,4 @@ public class Utility {
         }
         return "By USD1  " + resultUSD1By+ "    Sell USD1 " + resultUSD1Sell;
     }
-
 }

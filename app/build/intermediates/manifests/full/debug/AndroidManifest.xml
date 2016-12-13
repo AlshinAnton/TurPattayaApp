@@ -37,8 +37,8 @@
         <activity android:name="ru.turpattaya.turpattayaapp.TaxiActivity" />
         <activity
             android:name="ru.turpattaya.turpattayaapp.BaseActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="ru.turpattaya.turpattayaapp.CurrencyExchange.CurrencyExchangeActivity" />
     </application>
 
 </manifest>

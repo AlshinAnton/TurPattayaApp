@@ -84,15 +84,19 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:30:19-44
 activity#ru.turpattaya.turpattayaapp.TaxiActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:9-50
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:9-50
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:19-47
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:19-47
 activity#ru.turpattaya.turpattayaapp.BaseActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:33:9-35:20
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:9-34:68
 	android:theme
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:34:13-56
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:33:19-47
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:33:13-41
+activity#ru.turpattaya.turpattayaapp.CurrencyExchange.CurrencyExchangeActivity
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:9-88
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:19-76
 uses-sdk
 INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:20:5-43
