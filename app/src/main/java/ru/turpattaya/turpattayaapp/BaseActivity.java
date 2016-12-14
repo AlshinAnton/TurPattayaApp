@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import ru.turpattaya.turpattayaapp.CurrencyExchange.CurrencyExchangeActivity;
+import ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

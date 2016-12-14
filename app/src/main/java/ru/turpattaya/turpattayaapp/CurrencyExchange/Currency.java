@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp.CurrencyExchange;
+package ru.turpattaya.turpattayaapp.currencyExchange;
 
 /**
  * Created by MSI on 12/14/2016.

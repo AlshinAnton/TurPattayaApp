@@ -1,13 +1,10 @@
-package ru.turpattaya.turpattayaapp.CurrencyExchange;
+package ru.turpattaya.turpattayaapp.currencyExchange;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-/**
- * Created by MSI on 12/14/2016.
- */
 
 public interface CurrencyExchangeService {
-    @GET("latest")
+    @GET("latest?base=THB")
     Call<CurrencyExchange> loadCurrencyExchange();
 }

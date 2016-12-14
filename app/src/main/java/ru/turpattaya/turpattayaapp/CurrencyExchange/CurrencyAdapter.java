@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp.CurrencyExchange;
+package ru.turpattaya.turpattayaapp.currencyExchange;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,19 +11,18 @@ import java.util.List;
 
 import ru.turpattaya.turpattayaapp.R;
 
-/**
- * Created by MSI on 12/14/2016.
- */
-
 public class CurrencyAdapter extends BaseAdapter {
 
     private Context context;
     private LayoutInflater layoutInflater;
     private List<Currency> currencyList;
 
-    public CurrencyAdapter(Context context, List<Currency> currencyList) {
+    private CurrencyItemClickListener currencyItemClickListener;
+
+    public CurrencyAdapter(Context context, List<Currency> currencyList, CurrencyItemClickListener currencyItemClickListener) {
         this.context = context;
         this.currencyList = currencyList;
+        this.currencyItemClickListener = currencyItemClickListener;
         layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -48,9 +47,16 @@ public class CurrencyAdapter extends BaseAdapter {
         TextView tvName = (TextView) currencyItemView.findViewById(R.id.tvName);
         TextView tvRate = (TextView) currencyItemView.findViewById(R.id.tvRate);
 
-        Currency currency = currencyList.get(position);
+        final Currency currency = currencyList.get(position);
         tvName.setText(currency.getName());
         tvRate.setText(Double.toString(currency.getRate()));
+
+        currencyItemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currencyItemClickListener.onCurrencyItemClick(currency);
+            }
+        });
         return currencyItemView;
     }
 }

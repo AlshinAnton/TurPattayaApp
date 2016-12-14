@@ -1,6 +1,6 @@
-package ru.turpattaya.turpattayaapp.CurrencyExchange;
+package ru.turpattaya.turpattayaapp.currencyExchange;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -10,14 +10,16 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.R;
 
-public class CurrencyExchangeActivity extends AppCompatActivity implements Callback<CurrencyExchange> {
+public class CurrencyExchangeActivity extends BaseActivity implements Callback<CurrencyExchange>, CurrencyItemClickListener {
     private ListView lvCurrency;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppThemeDrawer);
         setContentView(R.layout.activity_currency_exchange);
         lvCurrency = (ListView) findViewById(R.id.lvCurrency);
     }
@@ -43,11 +45,21 @@ public class CurrencyExchangeActivity extends AppCompatActivity implements Callb
     public void onResponse(Call<CurrencyExchange> call, Response<CurrencyExchange> response) {
         /*Toast.makeText(this, response.body().getBase(), Toast.LENGTH_LONG).show();*/
         CurrencyExchange currencyExchange = response.body();
-        lvCurrency.setAdapter(new CurrencyAdapter(this,currencyExchange.getCurrencyList()));
+        lvCurrency.setAdapter(new CurrencyAdapter(this,currencyExchange.getCurrencyList(), this));
     }
 
     @Override
     public void onFailure(Call<CurrencyExchange> call, Throwable t) {
         Toast.makeText(this, t.getMessage(), Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onCurrencyItemClick(Currency currency) {
+        /*Toast.makeText(this, currency.getName(), Toast.LENGTH_LONG).show();*/
+        Intent intent = new Intent(this, CurrencyExchangeActivity2.class);
+        intent.putExtra("currency_name", currency.getName());
+        intent.putExtra("currency_rate", currency.getRate());
+
+        startActivity(intent);
     }
 }

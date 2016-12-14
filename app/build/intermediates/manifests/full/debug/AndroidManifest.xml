@@ -32,13 +32,18 @@
         <activity
             android:name="ru.turpattaya.turpattayaapp.ExcursionDetailActivity"
             android:label="@string/title_activity_excursion_detail"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name="ru.turpattaya.turpattayaapp.OrderForm" />
         <activity android:name="ru.turpattaya.turpattayaapp.TaxiActivity" />
         <activity
             android:name="ru.turpattaya.turpattayaapp.BaseActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="ru.turpattaya.turpattayaapp.CurrencyExchange.CurrencyExchangeActivity" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity2" >
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+        </activity>
     </application>
 
 </manifest>

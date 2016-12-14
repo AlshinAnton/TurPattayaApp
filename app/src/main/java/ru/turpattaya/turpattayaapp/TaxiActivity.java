@@ -35,6 +35,7 @@ public class TaxiActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppThemeDrawer);
         setContentView(R.layout.activity_taxi);
         spinnerFrom = (Spinner) findViewById(R.id.spinner_from_taxi_fragment);
         spinnerTo = (Spinner) findViewById(R.id.spinner_destination_fragment_taxi);

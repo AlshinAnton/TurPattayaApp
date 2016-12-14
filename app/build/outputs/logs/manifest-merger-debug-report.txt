@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:10:5-36:19
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:10:5-40:19
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:percent:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\percent\24.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\AndroidManifest.xml:9:5-20
@@ -72,11 +72,11 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:23:27-74
 activity#ru.turpattaya.turpattayaapp.ExcursionDetailActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:26:9-29:59
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:26:9-29:65
 	android:label
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:28:13-68
 	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:29:13-56
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:29:13-63
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:27:13-52
 activity#ru.turpattaya.turpattayaapp.OrderForm
@@ -88,15 +88,21 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:19-47
 activity#ru.turpattaya.turpattayaapp.BaseActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:9-34:68
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:9-34:65
 	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:34:13-56
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:34:13-63
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:33:13-41
-activity#ru.turpattaya.turpattayaapp.CurrencyExchange.CurrencyExchangeActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:9-88
+activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:9-36:65
+	android:theme
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:36:13-63
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:19-76
+activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity2
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:9-39:20
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:19-77
 uses-sdk
 INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:20:5-43
