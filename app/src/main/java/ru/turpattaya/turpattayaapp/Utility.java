@@ -59,7 +59,6 @@ public class Utility {
             }
         }
         catch (Exception e) {e.printStackTrace();}
-
         return buffer.toString();
     }
 

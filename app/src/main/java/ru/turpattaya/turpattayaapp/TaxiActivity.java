@@ -3,6 +3,7 @@ package ru.turpattaya.turpattayaapp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,6 +29,7 @@ public class TaxiActivity extends BaseActivity {
 
     String destinationCode = "";
     String fromCode = "";
+    String carColumn = "";
 
     MySQLiteHelper helper;
 
@@ -92,6 +94,7 @@ public class TaxiActivity extends BaseActivity {
 
                 String selectedText = parent.getItemAtPosition(position).toString();
                 if (selectedText.contains("Выберите")) {
+                    fromCode="";
                     /*spinnerTo.setClickable(false);*/
                     return;
                 }
@@ -99,7 +102,7 @@ public class TaxiActivity extends BaseActivity {
                     String selectedCode = fromPares.get(selectedText);
                     fromCode = fromPares.get(selectedText);
                     fillDestinationSpinner(selectedCode);
-                    spinnerTo.setClickable(true);
+                    calculatePrice();
                 }
             }
 
@@ -113,12 +116,13 @@ public class TaxiActivity extends BaseActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedText = parent.getItemAtPosition(position).toString();
                 if (selectedText.contains("Выберите")) {
+                    destinationCode = "";
                     /*spinnerCar.setClickable(false);*/
                     return;
                 }
                 if (destinationPares.containsKey(selectedText)) {
                     destinationCode = destinationPares.get(selectedText);
-                    spinnerCar.setClickable(true);
+                    calculatePrice();
 
                 }
             }
@@ -139,17 +143,13 @@ public class TaxiActivity extends BaseActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String car = parent.getItemAtPosition(position).toString(); // так мы достаем из спиннера текст выбранный
                 if (car.equals("Легковая")) {
-                    String colomn = TaxiTable.COLOMN_TAXI_PRICESMALCAR;
-
-                    calculatePrice(colomn);
+                    carColumn = TaxiTable.COLOMN_TAXI_PRICESMALCAR;
                 } else if (car.equals("Минивэн")) {
-                    String colomn = TaxiTable.COLOMN_TAXI_PRICEINOVACAR;
-                    calculatePrice(colomn);
+                    carColumn = TaxiTable.COLOMN_TAXI_PRICEINOVACAR;
                 } else if (car.equals("Микроавтобус")) {
-                    String colomn = TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR;
-
-                    calculatePrice(colomn);
+                    carColumn = TaxiTable.COLOMN_TAXI_PRICEMINIBUSCAR;
                 }
+                calculatePrice();
             }
 
             @Override
@@ -199,7 +199,12 @@ public class TaxiActivity extends BaseActivity {
         spinnerTo.setAdapter(spinnerArrayAdapter);
     }
 
-    private String calculatePrice(String colomnName) {
+    private void calculatePrice() {
+
+        Log.d("Valo", fromCode + " " + destinationCode + " " + carColumn);
+
+        if (fromCode.isEmpty() || destinationCode.isEmpty() || carColumn.isEmpty()) return;
+
         Cursor cursor = null;
 
 
@@ -216,14 +221,12 @@ public class TaxiActivity extends BaseActivity {
                 null
         );
 
-        if (!cursor.moveToFirst()) return "";
+        if (!cursor.moveToFirst()) return;
 
-        String value = cursor.getString(cursor.getColumnIndexOrThrow(colomnName));
+        String value = cursor.getString(cursor.getColumnIndexOrThrow(carColumn));
         cursor.close();
 
         priceRezult.setText(value == null ? "" : value + " Бат");
-
-        return value;
     }
 
     @Override
@@ -232,4 +235,5 @@ public class TaxiActivity extends BaseActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
 }
