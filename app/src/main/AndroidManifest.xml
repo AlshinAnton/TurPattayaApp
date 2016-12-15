@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -26,17 +27,21 @@
         <activity
             android:name=".ExcursionDetailActivity"
             android:label="@string/title_activity_excursion_detail"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".OrderForm" />
         <activity android:name=".TaxiActivity" />
         <activity
             android:name=".BaseActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".currencyExchange.CurrencyExchangeActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".currencyExchange.CurrencyExchangeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".currencyExchange.CurrencyExchangeActivity2">
             android:theme="@style/Theme.AppCompat.NoActionBar"
         </activity>
+        <activity android:name=".weather.WeatherActivity" />
+
+        <activity android:name=".weather.SettingsWeatherActivity"/>
     </application>
 
 </manifest>

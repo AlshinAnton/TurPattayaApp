@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity;
+import ru.turpattaya.turpattayaapp.weather.WeatherActivity;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -68,6 +69,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, CurrencyExchangeActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_weather) {
+            Intent intent = new Intent(this, WeatherActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
         } else if (id == R.id.nav_contacts) {
         } else if (id == R.id.nav_aboutUs) {
