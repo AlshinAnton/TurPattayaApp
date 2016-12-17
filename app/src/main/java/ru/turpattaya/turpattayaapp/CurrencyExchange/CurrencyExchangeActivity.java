@@ -56,7 +56,7 @@ public class CurrencyExchangeActivity extends BaseActivity implements Callback<C
     @Override
     public void onCurrencyItemClick(Currency currency) {
         /*Toast.makeText(this, currency.getName(), Toast.LENGTH_LONG).show();*/
-        Intent intent = new Intent(this, CurrencyExchangeActivity2.class);
+        Intent intent = new Intent(this, CurrencyConverter.class);
         intent.putExtra("currency_name", currency.getName());
         intent.putExtra("currency_rate", currency.getRate());
 

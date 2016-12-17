@@ -36,7 +36,7 @@
         <activity
             android:name=".currencyExchange.CurrencyExchangeActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".currencyExchange.CurrencyExchangeActivity2">
+        <activity android:name=".currencyExchange.CurrencyConverter">
             android:theme="@style/Theme.AppCompat.NoActionBar"
         </activity>
         <activity android:name=".weather.WeatherActivity" />

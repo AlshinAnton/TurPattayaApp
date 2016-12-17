@@ -42,7 +42,7 @@
         <activity
             android:name="ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name="ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity2" >
+        <activity android:name="ru.turpattaya.turpattayaapp.currencyExchange.CurrencyConverter" >
             android:theme="@style/Theme.AppCompat.NoActionBar"
         </activity>
         <activity android:name="ru.turpattaya.turpattayaapp.weather.WeatherActivity" />

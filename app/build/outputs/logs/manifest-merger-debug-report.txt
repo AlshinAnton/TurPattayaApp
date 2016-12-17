@@ -103,10 +103,10 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:38:13-63
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:13-70
-activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity2
+activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyConverter
 ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:39:9-41:20
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:39:19-77
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:39:19-69
 activity#ru.turpattaya.turpattayaapp.weather.WeatherActivity
 ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:42:9-61
 	android:name

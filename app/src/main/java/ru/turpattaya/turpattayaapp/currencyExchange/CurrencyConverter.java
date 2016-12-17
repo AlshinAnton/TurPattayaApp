@@ -10,7 +10,7 @@ import android.widget.TextView;
 import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.R;
 
-public class CurrencyExchangeActivity2 extends BaseActivity {
+public class CurrencyConverter extends BaseActivity {
 
     private TextView tvTitle, tvSubTitle, tvOutputName, tvOutputRate;
     private EditText etInput;
@@ -23,7 +23,7 @@ public class CurrencyExchangeActivity2 extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppThemeDrawer);
-        setContentView(R.layout.activity_currency_exchange2);
+        setContentView(R.layout.activity_converter);
         tvTitle  = (TextView) findViewById(R.id.tvTitle);
         tvSubTitle  = (TextView) findViewById(R.id.tvSubTitle);
         tvOutputName  = (TextView) findViewById(R.id.tvOutputName);
