@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -17,26 +18,74 @@
             android:textAlignment="center"
             android:textColor="@android:color/black" />
 
-        <EditText
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
-            android:paddingTop="20dp"
-            android:id="@+id/name_orderform"
-            android:hint="Имя и Фамилия"
+            android:id="@+id/pickup_place_orderform"
+            android:hint="Место подачи машины"
             android:textAlignment="center" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/destination_orderform"
+            android:hint="Пункт назначения (город, отель)"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Цена"
+            android:id="@+id/price_orderform"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/car_orderform"
+            android:hint="Тип машины"
+            android:textAlignment="center" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_name_orderform">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:paddingTop="20dp"
+                    android:id="@+id/name_orderform"
+                    android:hint="Имя"
+                    android:textAlignment="center" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_mail_orderform">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-
             android:id="@+id/mail_orderform"
             android:hint="Введите адрес электронной почты"
             android:textAlignment="center" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_phone_orderform">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,52 +94,43 @@
             android:id="@+id/phone_orderform"
             android:hint="Номер телефона"
             android:textAlignment="center" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
+
+
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/airport_of_departure_orderform"
-            android:hint="Страна и аэропорт (откуда вылетаете)"
-            android:textAlignment="center" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/airport_of_arrival_orderform"
-            android:hint="Аэропорт или место подачи машины"
-            android:textAlignment="center" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/flight_number_orderform"
-            android:hint="Номер рейса (если аэропорт)"
-            android:textAlignment="center" />
-
+            android:id="@+id/input_layout_date_orderform">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/arrival_date_orderform"
+            android:id="@+id/date_orderform"
             android:textAlignment="center"
-            android:hint="Дата прилета" />
+            android:hint="Дата" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_time_orderform">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="time"
             android:ems="10"
-            android:id="@+id/arrival_time_orderform"
+            android:id="@+id/time_orderform"
             android:textAlignment="center"
-            android:hint="Время прилета" />
+            android:hint="Время" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_num_od_pas_orderform">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,16 +139,12 @@
             android:id="@+id/num_of_passengers_orderform"
             android:hint="Колличество пассажиров"
             android:textAlignment="center" />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/destination_orderform"
-            android:hint="Пункт назначения (город, отель)"
-            android:textAlignment="center" />
-
+            android:id="@+id/input_layout_remark_orderform">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,7 +152,34 @@
             android:hint="Пожелания"
             android:id="@+id/remark_orderform"
             android:textAlignment="center"
-            android:inputType="text" />
+            android:inputType="textImeMultiLine" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_send_form"
+            android:layout_weight="1"
+            android:text="Заказать"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_back_taxiactivity"
+            android:layout_weight="1"
+            android:text="Назад"
+            android:onClick="backToTaxiActivity"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

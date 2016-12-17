@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
+import ru.turpattaya.turpattayaapp.R;
 import ru.turpattaya.turpattayaapp.weather.data.Channel;
 import ru.turpattaya.turpattayaapp.weather.listener.WeatherServiceListener;
 
@@ -69,7 +70,7 @@ public class YahooWeatherService {
                     int count = queryResults.optInt("count");
 
                     if (count == 0) {
-                        error = new LocationWeatherException("No weather information found for " + location);
+                        error = new LocationWeatherException((R.string.No_weather_information_found_for) + location);
                         return null;
                     }
 

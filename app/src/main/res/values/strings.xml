@@ -15,11 +15,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-
-    <string name="action_settings">Settings</string>
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_excursion_detail">ExcursionDetailActivity</string>
 
 
@@ -33,17 +28,24 @@
     <string name="title_activity_excursion_list">ExcursionListActivity</string>
 
 
-    <string name="temperature">Temperature</string>
-    <string name="condition">Condition</string>
-    <string name="location">Location</string>
+    <string name="temperature">Температура</string>
+    <string name="condition">Состояние</string>
+    <string name="location">Местоположение</string>
     <string name="powered_by_yahoo">powered by Yahoo!</string>
     <string name="condition_icon">Condition Icon</string>
-    <string name="loading">Loading&#8230;</string>
+    <string name="loading">Загрузка&#8230;</string>
     <string name="temperature_output">%1$d&#176;%2$s</string>
-    <string name="update_location">Update Location</string>
-    <string name="settings">Settings</string>
-    <string name="cache_exception">No Cached Weather Data</string>
-    <string name="location_permission_needed">Device location is needed for Weather GeoLocation</string>
-    <string name="disable_geolocation">Change Settings</string>
+    <string name="update_location">Обновление местоположения</string>
+    <string name="settings">Настройки</string>
+    <string name="cache_exception">Нет данных о погоде</string>
+    <string name="location_permission_needed">Доступ к геопозиции необходим для определения погоды в Вашем регионе</string>
+    <string name="disable_geolocation">Изменить настройки</string>
+    <string name="No_weather_information_found_for">"No weather information found for "</string>
+    <string name="ErrorNameOrderForm">Ведите пожалуйста Ваше имя</string>
+    <string name="errorMailOrderform">Введите пожалуйста Ваш eMail</string>
+    <string name="errorPhoneOrderform">Введите пожалуйста Ваш телефон</string>
+    <string name="errorDateOrderform">Введите пожалуйста дату поездки</string>
+    <string name="errorTimeOrderform">Введите пожалуйста время поездки</string>
+    <string name="errorNumOfPasOrderform">Введите пожалуйста колличество человек</string>
 
 </resources>

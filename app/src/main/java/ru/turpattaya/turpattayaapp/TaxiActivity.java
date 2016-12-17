@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,8 +95,7 @@ public class TaxiActivity extends BaseActivity {
 
                 String selectedText = parent.getItemAtPosition(position).toString();
                 if (selectedText.contains("Выберите")) {
-                    fromCode="";
-                    /*spinnerTo.setClickable(false);*/
+                    fromCode = "";
                     return;
                 }
                 if (fromPares.containsKey(selectedText)) {
@@ -236,4 +236,24 @@ public class TaxiActivity extends BaseActivity {
         startActivity(intent);
     }
 
+
+    public void orderTAXI(View view) {
+        if (fromCode.isEmpty() || destinationCode.isEmpty() || carColumn.isEmpty()) {
+            Toast.makeText(this, "Пожалуйста заполните все поля", Toast.LENGTH_LONG).show();
+        } else {
+            switch (view.getId()) {
+                case R.id.btn_taxi_order:
+                    Intent intent = new Intent(this, OrderForm.class);
+                    intent.putExtra("from", spinnerFrom.getSelectedItem().toString());
+                    intent.putExtra("destination", spinnerTo.getSelectedItem().toString());
+                    intent.putExtra("car", spinnerCar.getSelectedItem().toString());
+                    intent.putExtra("price", priceRezult.getText().toString());
+                    startActivity(intent);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    }
 }

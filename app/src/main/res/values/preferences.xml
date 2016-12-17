@@ -1,20 +1,20 @@
 
 <resources>
-    <string name="pref_geolocation_enabled">geolocation_enabled</string>
-    <string name="pref_manual_location">manual_location</string>
-    <string name="pref_cached_location">cached_location</string>
-    <string name="pref_temperature_unit">temperature_unit</string>
-    <string name="pref_needs_setup">needs_setup</string>
+    <string name="pref_geolocation_enabled">Доступ к Вашей геопозиции возможен</string>
+    <string name="pref_manual_location">Местоположение по умолчанию</string>
+    <string name="pref_cached_location">захват локации</string>
+    <string name="pref_temperature_unit">температура юнит</string>
+    <string name="pref_needs_setup">нужны настройки</string>
     <string name="pref_default_unit">C</string>
 
-    <string name="pref_header_general">General</string>
-    <string name="pref_title_enable_geolocation">Enable GeoLocation</string>
-    <string name="pref_description_enable_geolocation">Automatically obtain weather information based on my current location</string>
+    <string name="pref_header_general">Основные</string>
+    <string name="pref_title_enable_geolocation">Доступ к геопозиции включен</string>
+    <string name="pref_description_enable_geolocation">Автоматическое обновление погодных условий основано на моей текущей геопозиции</string>
 
-    <string name="pref_title_manual_location">Manual Location</string>
-    <string name="pref_default_location">Austin, TX</string>
+    <string name="pref_title_manual_location">Местоположение по умолчанию</string>
+    <string name="pref_default_location">Pattaya, Thailand</string>
 
-    <string name="pref_title_temperature_unit">Temperature Unit</string>
+    <string name="pref_title_temperature_unit">температура юнит тайтл</string>
     <string-array name="pref_temperature_unit_titles">
         <item>&#176;C</item>
         <item>&#176;F</item>
