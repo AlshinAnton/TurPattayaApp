@@ -45,11 +45,6 @@
                 android:checked="true"
                 android:title="Контакты"
                 android:icon="@drawable/ic_contact_phone_white_24dp"/>
-            <item
-                android:id="@+id/nav_aboutUs"
-                android:checked="true"
-                android:title="О нас"
-                android:icon="@drawable/ic_info_white_24dp"/>
         </menu>
     </item>
 

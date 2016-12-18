@@ -21,6 +21,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void setContentView(int layoutResID)
     {
+        setTheme(R.style.AppThemeDrawer);
         DrawerLayout drawer = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_base, null);
         FrameLayout activityContainer = (FrameLayout) drawer.findViewById(R.id.activity_content);
         getLayoutInflater().inflate(layoutResID, activityContainer, true);
@@ -67,6 +68,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, TaxiActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_myFavorite) {
+            Intent intent = new Intent(this, MyFavoriteActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_rates) {
             Intent intent = new Intent(this, CurrencyExchangeActivity.class);
             startActivity(intent);
@@ -74,8 +77,11 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, WeatherActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
+            Intent intent = new Intent(this, ShareActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_contacts) {
-        } else if (id == R.id.nav_aboutUs) {
+            Intent intent = new Intent(this, ContactsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

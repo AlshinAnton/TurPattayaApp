@@ -40,8 +40,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar"
         </activity>
         <activity android:name=".weather.WeatherActivity" />
-
-        <activity android:name=".weather.SettingsWeatherActivity"/>
+        <activity android:name=".weather.SettingsWeatherActivity" />
+        <activity android:name=".MyFavoriteActivity" />
+        <activity android:name=".ShareActivity" />
+        <activity android:name=".ContactsActivity"></activity>
     </application>
 
 </manifest>
