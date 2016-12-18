@@ -1,9 +1,6 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.excursions;
 
 import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.ViewFlipper;
 
 
 public class Excursion implements Comparable<Excursion> {

@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.taxi;
 
 import android.database.sqlite.SQLiteDatabase;
 

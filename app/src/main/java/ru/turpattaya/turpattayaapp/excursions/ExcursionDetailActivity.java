@@ -1,26 +1,20 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.excursions;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import java.io.IOException;
 import java.util.ArrayList;
+
+import ru.turpattaya.turpattayaapp.BaseActivity;
+import ru.turpattaya.turpattayaapp.MySQLiteHelper;
+import ru.turpattaya.turpattayaapp.R;
 
 public class ExcursionDetailActivity extends BaseActivity {
 
@@ -104,7 +98,7 @@ public class ExcursionDetailActivity extends BaseActivity {
 
         @Override
         public Fragment getItem(int position) {
-            ExcursionImageItemFragment excursionImageItemFragment = new ExcursionImageItemFragment();
+            ExcursionImageItem excursionImageItemFragment = new ExcursionImageItem();
             Bundle bundle = new Bundle();
             bundle.putString("url", adapterUrls.get(position));
             excursionImageItemFragment.setArguments(bundle);

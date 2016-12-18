@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity;
+import ru.turpattaya.turpattayaapp.excursions.MainActivity;
+import ru.turpattaya.turpattayaapp.taxi.TaxiActivity;
 import ru.turpattaya.turpattayaapp.weather.WeatherActivity;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

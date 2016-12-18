@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.excursions;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import ru.turpattaya.turpattayaapp.R;
 import ru.turpattaya.turpattayaapp.ViewHolders.ViewHolderExcursionList;
 
 

@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.taxi;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,6 +14,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import ru.turpattaya.turpattayaapp.BaseActivity;
+import ru.turpattaya.turpattayaapp.excursions.MainActivity;
+import ru.turpattaya.turpattayaapp.MySQLiteHelper;
+import ru.turpattaya.turpattayaapp.R;
 
 public class TaxiActivity extends BaseActivity {
 

@@ -8,13 +8,13 @@
     <string name="pref_default_unit">C</string>
 
     <string name="pref_header_general">Основные</string>
-    <string name="pref_title_enable_geolocation">Доступ к геопозиции включен</string>
+    <string name="pref_title_enable_geolocation">Доступ к геопозиции</string>
     <string name="pref_description_enable_geolocation">Автоматическое обновление погодных условий основано на моей текущей геопозиции</string>
 
     <string name="pref_title_manual_location">Местоположение по умолчанию</string>
     <string name="pref_default_location">Pattaya, Thailand</string>
 
-    <string name="pref_title_temperature_unit">температура юнит тайтл</string>
+    <string name="pref_title_temperature_unit">Показывать температуру в:</string>
     <string-array name="pref_temperature_unit_titles">
         <item>&#176;C</item>
         <item>&#176;F</item>

@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
+import ru.turpattaya.turpattayaapp.excursions.ExcursionTable;
+
 public class MySQLiteHelper extends SQLiteAssetHelper {
 
     private static final String DATABASE_NAME = "tourptt.sqlite";

@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.taxi;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
@@ -12,6 +12,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import ru.turpattaya.turpattayaapp.R;
+import ru.turpattaya.turpattayaapp.taxi.TaxiActivity;
 
 public class OrderForm extends AppCompatActivity {
     private EditText name;

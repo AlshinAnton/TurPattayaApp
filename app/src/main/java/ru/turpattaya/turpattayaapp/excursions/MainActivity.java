@@ -1,12 +1,16 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.excursions;
 
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.widget.ListView;
 
+import ru.turpattaya.turpattayaapp.BaseActivity;
+import ru.turpattaya.turpattayaapp.MySQLiteHelper;
+import ru.turpattaya.turpattayaapp.R;
 
-public class MainActivity extends BaseActivity{
+
+public class MainActivity extends BaseActivity {
 
     String orderBy = "";
     static String selection= "";

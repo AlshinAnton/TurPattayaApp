@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.excursions;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,10 +9,12 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import ru.turpattaya.turpattayaapp.R;
+
 /**
  * Created by MSI on 29.10.2016.
  */
-public class ExcursionImageItemFragment extends Fragment{
+public class ExcursionImageItem extends Fragment{
 
 
     @Override
