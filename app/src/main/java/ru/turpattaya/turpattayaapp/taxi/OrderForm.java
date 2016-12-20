@@ -84,32 +84,28 @@ public class OrderForm extends AppCompatActivity {
                 Log.d("Valo","Send email");
                 switch (v.getId()) {
                     case R.id.btn_send_form:
-                        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
-                        emailIntent.setData(Uri.parse("alshinanton@gmail.com"));
+                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                        emailIntent.setData(Uri.parse("mailto:"));
+                        String to = "alshinanton@gmail.com";
+                        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
+                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Taxi order");
+
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, "from" + pickupPlace.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, destinationOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, carOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, priceOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, nameOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, emailOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, phoneOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, dateOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, numberOfPassengerOrderForm.getText().toString());
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, remarksOrderForm.getText().toString());
                         emailIntent.setType("text/plain");
-                        emailIntent.putExtra("from", pickupPlace.getText().toString());
-                        emailIntent.putExtra("destination", destinationOrderForm.getText().toString());
-                        emailIntent.putExtra("car", carOrderForm.getText().toString());
-                        emailIntent.putExtra("price", priceOrderForm.getText().toString());
-                        emailIntent.putExtra("nameOrderForm", nameOrderForm.getText().toString());
-                        emailIntent.putExtra("email", emailOrderForm.getText().toString());
-                        emailIntent.putExtra("phone", phoneOrderForm.getText().toString());
-                        emailIntent.putExtra("date", dateOrderForm.getText().toString());
-                        emailIntent.putExtra("numOfPas", numberOfPassengerOrderForm.getText().toString());
-                        emailIntent.putExtra("remarks", remarksOrderForm.getText().toString());
 
-                        try {
-                            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-                            finish();
-                            Log.d("Valo","Finished sending email");
-                        } catch (android.content.ActivityNotFoundException ex) {
-                            Toast.makeText(OrderForm.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
-                        }
+                            Intent chooser = Intent.createChooser(emailIntent, "Send mail");
+                            startActivity(chooser);
 
-                        /*startActivity(emailIntent);
-                        break;
-                    default:
-                        break;*/
+
                 }
             }
         });
