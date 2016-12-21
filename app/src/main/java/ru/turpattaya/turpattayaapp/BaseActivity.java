@@ -23,7 +23,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     {
         setTheme(R.style.AppThemeDrawer);
         DrawerLayout drawer = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_base, null);
-        FrameLayout activityContainer = (FrameLayout) drawer.findViewById(R.id.activity_content);
+        FrameLayout activityContainer = (FrameLayout) drawer.findViewById(R.id.activity_base_content_frame);
         getLayoutInflater().inflate(layoutResID, activityContainer, true);
         super.setContentView(drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

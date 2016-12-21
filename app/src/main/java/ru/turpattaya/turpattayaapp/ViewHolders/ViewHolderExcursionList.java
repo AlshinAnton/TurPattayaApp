@@ -19,14 +19,5 @@ public class ViewHolderExcursionList {
     public ImageView imagePreview;
     public TextView textExcursionPreview;
     public TextView textPricePreview;
-
-
-
-    TextView from_item_taxi;
-    TextView where_item_taxi;
-    TextView car_item_taxi;
-    TextView minivan_item_taxi;
-    TextView minibus_item_taxi;
-
-
+    public ImageView imageFavorite;
 }

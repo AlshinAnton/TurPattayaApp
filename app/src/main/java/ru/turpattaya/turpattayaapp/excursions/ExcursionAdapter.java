@@ -33,7 +33,7 @@ public class ExcursionAdapter extends CursorAdapter {
         holder.imagePreview = (ImageView) row.findViewById(R.id.image_preview);
         holder.textExcursionPreview = (TextView) row.findViewById(R.id.text_excursion_preview);
         holder.textPricePreview = (TextView) row.findViewById(R.id.text_price_preview);
-        // populateView(holder, cursor, context);
+        holder.imageFavorite = (ImageView) viewGroup.findViewById(R.id.item_list_favorite);
 
         row.setTag(holder);
 
@@ -48,8 +48,6 @@ public class ExcursionAdapter extends CursorAdapter {
         if(!TextUtils.isEmpty(url))
         {
             Picasso.with(context).load(url).fit().centerCrop().into(holder.imagePreview);
-            // holder.imagePreview.setImageURI(Uri.parse()));
-
         }
 
         final long id = cursor.getLong(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_ID));

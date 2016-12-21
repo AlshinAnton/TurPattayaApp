@@ -5,14 +5,17 @@
     <color name="colorAccent">#FF4081</color>
 
 
-<!--
-    spinner collors
--->
+    <!--spinner collors-->
     <color name="ms_baseColor">#3F51B5</color>
     <color name="ms_highlightColor">#303F9F</color>
     <color name="ms_errorColor">#FF0000</color>
     <color name="ms_hintColor">#B0E0E6</color>
     <color name="ms_arrowColor">#FFFF00</color>
     <color name="ms_floatingLabelColor">#DAA520</color>
+
+    <!--favorite collors-->
+    <color name="transparent">#00000000</color>
+    <color name="product_list_item_bg">#ffffff</color>
+    <color name="view_divider_color">#BABABA</color>
 
 </resources>

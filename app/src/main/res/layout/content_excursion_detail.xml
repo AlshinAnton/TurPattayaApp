@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,12 +20,22 @@
             android:layout_below="@+id/appBar"
             android:layout_centerHorizontal="true" />
 
+        <ImageView
+            android:id="@+id/image_detail_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="add_to_favorites_from_detail"
+            android:layout_below="@+id/viewPager_excursion_detail"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            android:contentDescription="@string/favorites" />
 
         <TextView
             android:id="@+id/excursion_detail_pagetitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/viewPager_excursion_detail"
+            android:layout_below="@+id/image_detail_favorite"
             android:layout_centerHorizontal="true"
             android:padding="10dp"
             android:textSize="20sp" />
@@ -38,7 +47,6 @@
             android:layout_below="@+id/excursion_detail_pagetitle"
             android:layout_centerHorizontal="true"
             android:padding="3dp" />
-
 
     </RelativeLayout>
 </ScrollView>

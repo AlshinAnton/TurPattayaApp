@@ -3,7 +3,9 @@ package ru.turpattaya.turpattayaapp.excursions;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.MySQLiteHelper;
@@ -42,5 +44,9 @@ public class MainActivity extends BaseActivity {
         ExcursionAdapter adapter = new ExcursionAdapter(this, cursor);
 
         list.setAdapter(adapter);
+    }
+
+    public void add_to_favorites(View view) {
+        Toast.makeText(this, "Экскурсия добавлена в избранное", Toast.LENGTH_LONG).show();
     }
 }

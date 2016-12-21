@@ -39,7 +39,8 @@
                 android:id="@+id/nav_share"
                 android:checked="true"
                 android:title="Поделиться в социальных сетях"
-                android:icon="@drawable/ic_menu_share"/>
+                android:icon="@drawable/ic_menu_share"
+                android:actionProviderClass="android.widget.ShareActionProvider"/>
             <item
                 android:id="@+id/nav_contacts"
                 android:checked="true"

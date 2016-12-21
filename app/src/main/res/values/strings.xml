@@ -47,5 +47,12 @@
     <string name="errorDateOrderform">Введите пожалуйста дату поездки</string>
     <string name="errorTimeOrderform">Введите пожалуйста время поездки</string>
     <string name="errorNumOfPasOrderform">Введите пожалуйста колличество человек</string>
+    <string name="Baht">Бат</string>
+
+
+    <!--favorite-->
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="favorites">Favorites</string>
 
 </resources>

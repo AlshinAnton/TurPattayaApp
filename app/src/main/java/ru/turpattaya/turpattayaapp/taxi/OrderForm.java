@@ -1,24 +1,34 @@
 package ru.turpattaya.turpattayaapp.taxi;
 
+
+import android.annotation.SuppressLint;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
-import ru.turpattaya.turpattayaapp.R;
+import java.util.Calendar;
 
-public class OrderForm extends AppCompatActivity {
+import ru.turpattaya.turpattayaapp.BaseActivity;
+import ru.turpattaya.turpattayaapp.fragments.DatePickerFragment;
+import ru.turpattaya.turpattayaapp.R;
+import ru.turpattaya.turpattayaapp.fragments.TimePickerFragment;
+import ru.turpattaya.turpattayaapp.Utils;
+
+
+public class OrderForm extends BaseActivity {
     TextView pickupPlace;
     TextView destinationOrderForm;
     TextView carOrderForm;
@@ -33,12 +43,13 @@ public class OrderForm extends AppCompatActivity {
     private TextInputLayout ilNameOrderform;
     private TextInputLayout ilMailOrderform;
     private TextInputLayout ilPhoneOrderform;
-    private TextInputLayout ilDateOrderform;
-    private TextInputLayout ilTimeOrderform;
     private TextInputLayout ilNumOfPasOrderform;
+    private TextInputLayout ilDateOrderForm;
+    private TextInputLayout ilTimeOrderform;
     TextInputLayout ilremarkOrderform;
     Button btnSendOrderForm;
     Button btnBackToTaxiActivity;
+    final Calendar calendar = Calendar.getInstance();
 
 
     @Override
@@ -60,13 +71,14 @@ public class OrderForm extends AppCompatActivity {
         priceOrderForm = (TextView) findViewById(R.id.price_orderform);
         btnBackToTaxiActivity = (Button) findViewById(R.id.btn_back_taxiactivity);
 
+
         ilNameOrderform = (TextInputLayout) findViewById(R.id.input_layout_name_orderform);
         ilMailOrderform = (TextInputLayout) findViewById(R.id.input_layout_mail_orderform);
         ilPhoneOrderform = (TextInputLayout) findViewById(R.id.input_layout_phone_orderform);
-        ilTimeOrderform = (TextInputLayout) findViewById(R.id.input_layout_time_orderform);
-        ilDateOrderform = (TextInputLayout) findViewById(R.id.input_layout_date_orderform);
         ilNumOfPasOrderform = (TextInputLayout) findViewById(R.id.input_layout_num_od_pas_orderform);
         ilremarkOrderform = (TextInputLayout) findViewById(R.id.input_layout_remark_orderform);
+        ilDateOrderForm = (TextInputLayout) findViewById(R.id.input_layout_date_orderform);
+        ilTimeOrderform = (TextInputLayout) findViewById(R.id.input_layout_time_orderform);
 
         String txtFrom = getIntent().getStringExtra("from");
         pickupPlace.setText(pickupPlace.getText().toString() + " " + txtFrom);
@@ -77,59 +89,120 @@ public class OrderForm extends AppCompatActivity {
         String txtPrice = getIntent().getStringExtra("price");
         priceOrderForm.setText(priceOrderForm.getText().toString() + " " + txtPrice);
 
+        assert dateOrderForm != null;
+        dateOrderForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dateOrderForm.length() == 0) {
+                    dateOrderForm.setText("");
+                }
+                @SuppressLint("ValidFragment")
+                DialogFragment datePickerFragment = new DatePickerFragment() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        calendar.set(Calendar.YEAR, year);
+                        calendar.set(Calendar.MONTH, monthOfYear);
+                        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                        dateOrderForm.setText(Utils.getDate(calendar.getTimeInMillis()));
+                    }
+
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        dateOrderForm.setText(null);
+                    }
+                };
+                datePickerFragment.show(getFragmentManager(), "DatePickerFragment");
+            }
+        });
+
+        assert timeOrderForm != null;
+        timeOrderForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (timeOrderForm.length() == 0) {
+                    timeOrderForm.setText(" ");
+                }
+                @SuppressLint("ValidFragment")
+                DialogFragment timePickerFragment = new TimePickerFragment() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+                        calendar.set(Calendar.MINUTE, minute);
+                        calendar.set(Calendar.SECOND, 0);
+                        timeOrderForm.setText(Utils.getTime(calendar.getTimeInMillis()));
+                    }
+
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        timeOrderForm.setText(null);
+                    }
+                };
+                timePickerFragment.show(getFragmentManager(), "TimePickerFragment");
+            }
+        });
+
         btnSendOrderForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkForm();
+                if (!checkForm()) {
+                    Toast.makeText(OrderForm.this, "Заполните все поля", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
                 Log.d("Valo","Send email");
                 switch (v.getId()) {
                     case R.id.btn_send_form:
-                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                        emailIntent.setData(Uri.parse("mailto:"));
-                        String to = "alshinanton@gmail.com";
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Taxi order");
-
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, "from" + pickupPlace.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, destinationOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, carOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, priceOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, nameOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, emailOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, phoneOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, dateOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, numberOfPassengerOrderForm.getText().toString());
-                        emailIntent.putExtra(Intent.EXTRA_TEXT, remarksOrderForm.getText().toString());
-                        emailIntent.setType("text/plain");
-
-                            Intent chooser = Intent.createChooser(emailIntent, "Send mail");
-                            startActivity(chooser);
-
-
+                        Intent send = new Intent(Intent.ACTION_SENDTO);
+                        String uriText =
+                                "mailto:" + Uri.encode("ALSHINANTON@gmail.com") +
+                                        "?subject=" + Uri.encode("Заказ такси/TaxiOrder") +
+                                        "&body=" + Uri.encode("Откуда  " + pickupPlace.getText().toString() + "\n" +
+                                        "Куда " + destinationOrderForm.getText().toString() + "\n" +
+                                        "Тип машины " + carOrderForm.getText().toString() + "\n" +
+                                        "Цена " + priceOrderForm.getText().toString() + "\n" + "\n"+
+                                        "Информация о заказчике: \n" +
+                                        "Имя " + nameOrderForm.getText().toString() + "\n" +
+                                        "Email " + emailOrderForm.getText().toString() + "\n" +
+                                        "Номер телефона " + phoneOrderForm.getText().toString() + "\n" +
+                                        "Дата поездки " + dateOrderForm.getText().toString() + "\n" +
+                                        "Время " + timeOrderForm.getText().toString() + "\n" +
+                                        "Колличество пассажиров " + numberOfPassengerOrderForm.getText().toString() + "\n" +
+                                        "Пожелания " + remarksOrderForm.getText().toString());
+                        Uri emailUri = Uri.parse(uriText);
+                        send.setData(emailUri);
+                        startActivity(Intent.createChooser(send, "написать письмо"));
                 }
             }
         });
+
     }
 
-    private void checkForm() {
-        if (!validateName()){
-            return;
+    private boolean checkForm() {
+        return validateName() && validateMail() && validatePhone() && validateDate() && validateTime() && validateNuOfPas();
+    }
+
+    private boolean validateTime() {
+        if (timeOrderForm.getText().toString().trim().isEmpty()) {
+            ilTimeOrderform.setError(getString(R.string.errorTimeOrderform));
+            requestFocus(timeOrderForm);
+            return false;
+        } else {
+            ilTimeOrderform.setErrorEnabled(false);
         }
-        if (!validateMail()){
-            return;
+
+        return true;
+    }
+
+    private boolean validateDate() {
+        if (dateOrderForm.getText().toString().trim().isEmpty()) {
+            ilDateOrderForm.setError(getString(R.string.errorDateOrderform));
+            requestFocus(dateOrderForm);
+            return false;
+        } else {
+            ilDateOrderForm.setErrorEnabled(false);
         }
-        if (!validatePhone()){
-            return;
-        }
-        if (!validateDate()){
-            return;
-        }
-        if (!validateTime()){
-            return;
-        }
-        if (!validateNuOfPas()){
-            return;
-        }
+
+        return true;
     }
 
     private boolean validateName() {
@@ -170,30 +243,6 @@ public class OrderForm extends AppCompatActivity {
         return true;
     }
 
-    private boolean validateDate() {
-        if (dateOrderForm.getText().toString().trim().isEmpty()) {
-            ilDateOrderform.setError(getString(R.string.errorDateOrderform));
-            requestFocus(dateOrderForm);
-            return false;
-        } else {
-            ilDateOrderform.setErrorEnabled(false);
-        }
-
-        return true;
-    }
-
-    private boolean validateTime() {
-        if (timeOrderForm.getText().toString().trim().isEmpty()) {
-            ilTimeOrderform.setError(getString(R.string.errorTimeOrderform));
-            requestFocus(timeOrderForm);
-            return false;
-        } else {
-            ilTimeOrderform.setErrorEnabled(false);
-        }
-
-        return true;
-    }
-
     private boolean validateNuOfPas() {
         if (numberOfPassengerOrderForm.getText().toString().trim().isEmpty()) {
             ilNumOfPasOrderform.setError(getString(R.string.errorNumOfPasOrderform));
@@ -215,7 +264,8 @@ public class OrderForm extends AppCompatActivity {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
-    private class MyTextWatcher implements TextWatcher {
+
+/*    private class MyTextWatcher implements TextWatcher {
 
         private View view;
 
@@ -240,7 +290,7 @@ public class OrderForm extends AppCompatActivity {
 
             }
         }
-    }
+    }*/
 
     public void backToTaxiActivity(View v){
         switch (v.getId()) {
@@ -252,4 +302,7 @@ public class OrderForm extends AppCompatActivity {
                 break;
         }
     }
+
+
+
 }

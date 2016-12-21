@@ -8,7 +8,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -23,7 +26,7 @@ public class ExcursionDetailActivity extends BaseActivity {
 
     private TextView pagetitleExcursionDetail;
     private TextView contentExcursionDetail;
-
+    ImageView imageFavoriteDetail;
     private ViewPager viewPagerDetail;
 
 
@@ -39,6 +42,7 @@ public class ExcursionDetailActivity extends BaseActivity {
         pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
         contentExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
         viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
+        imageFavoriteDetail = (ImageView) findViewById(R.id.image_detail_favorite);
         viewPagerDetail.setPageTransformer(true, new ImagesDetailAnimation());
 
 
@@ -109,7 +113,10 @@ public class ExcursionDetailActivity extends BaseActivity {
         public int getCount() {
             return adapterUrls.size();
         }
+    }
 
+    public void add_to_favorites_from_detail(View view) {
+        Toast.makeText(this, "Экскурсия добавлена в избранное", Toast.LENGTH_LONG).show();
     }
 }
 
