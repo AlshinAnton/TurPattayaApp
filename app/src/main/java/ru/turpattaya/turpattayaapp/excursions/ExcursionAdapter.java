@@ -42,8 +42,10 @@ public class ExcursionAdapter extends CursorAdapter {
     }
     private void populateViewExcursion(ViewHolderExcursionList holder, Cursor cursor, final Context context, View view)
     {
+        int c = 0x0E3F;
+        String s = Character.toString((char)c);
         holder.textExcursionPreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_PAGETITLE)));
-        holder.textPricePreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_VALUE)));
+        holder.textPricePreview.setText(cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_VALUE))+ s);
         String url = cursor.getString(cursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_URL));
         if(!TextUtils.isEmpty(url))
         {

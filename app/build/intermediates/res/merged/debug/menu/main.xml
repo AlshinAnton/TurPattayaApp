@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu >
 
-    <item
-        android:id="@+id/menu_search_excursion"
-        android:orderInCategory="100"
-        android:title="Поиск"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_search_white_24dp"/>
 
-    <item
-        android:id="@+id/menu_sort_ascending"
-        android:icon="@drawable/ic_vertical_align_bottom_white_24dp"
-        android:title="Сортировка А-Я"
-        app:showAsAction="never"/>
-
-    <item
-        android:id="@+id/menu_sort_descending"
-        android:icon="@drawable/ic_vertical_align_top_white_24dp"
-        android:title="Сортировка Я-А"
-        app:showAsAction="never"/>
 </menu>

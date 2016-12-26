@@ -1,8 +1,8 @@
 package ru.turpattaya.turpattayaapp.excursions;
 
+
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.MySQLiteHelper;
 import ru.turpattaya.turpattayaapp.R;
+import ru.turpattaya.turpattayaapp.SearchActivity;
 
 
 public class MainActivity extends BaseActivity {
@@ -17,7 +18,7 @@ public class MainActivity extends BaseActivity {
     String orderBy = "";
     static String selection= "";
 
-    SearchView searchView;
+
 
 
     @Override
@@ -25,10 +26,8 @@ public class MainActivity extends BaseActivity {
         setTheme(R.style.AppThemeDrawer);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*searchView = (SearchView) findViewById(R.id.search_excursion);*/
 
         ListView list = (ListView) findViewById(R.id.list_excursion);
-/*        TextView title = (TextView) view.findViewById(R.id.excursion_detail_pagetitle); */
 
         MySQLiteHelper helper = new MySQLiteHelper(this);
 
@@ -49,4 +48,17 @@ public class MainActivity extends BaseActivity {
     public void add_to_favorites(View view) {
         Toast.makeText(this, "Экскурсия добавлена в избранное", Toast.LENGTH_LONG).show();
     }
+  /*  @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu, menu);
+        return true;
+    }
+
+    @Override
+    public void startSearch(String initialQuery, boolean selectInitialQuery, Bundle appSearchData, boolean globalSearch) {
+
+        startActivity(new Intent(this, SearchActivity.class));
+    }
+*/
 }

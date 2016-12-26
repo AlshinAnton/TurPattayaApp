@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,20 +14,38 @@
             android:id="@+id/appBar"
             layout="@layout/app_bar_main" />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_for_viewpager"
+            android:layout_below="@+id/appBar">
+
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager_excursion_detail"
             android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:layout_below="@+id/appBar"
-            android:layout_centerHorizontal="true" />
+            android:layout_height="250dp"/>
+            <!--android:layout_centerHorizontal="true"-->
+
+        <com.viewpagerindicator.UnderlinePageIndicator
+            android:id="@+id/viewPager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            app:selectedColor="#77ff0000"
+            app:fadeDelay="1000"
+            app:fadeLength="1000"
+            android:visibility="gone"/>
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_detail_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="add_to_favorites_from_detail"
-            android:layout_below="@+id/viewPager_excursion_detail"
-            android:layout_centerInParent="true"
+            android:layout_below="@+id/frame_for_viewpager"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
             android:background="@null"
             android:src="@drawable/ic_favorite_border_black_24dp"
             android:contentDescription="@string/favorites" />
@@ -37,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/image_detail_favorite"
             android:layout_centerHorizontal="true"
-            android:padding="10dp"
+            android:padding="@dimen/material_drawer_item_primary_text"
             android:textSize="20sp" />
 
         <TextView
@@ -46,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/excursion_detail_pagetitle"
             android:layout_centerHorizontal="true"
-            android:padding="3dp" />
+            android:padding="16dp" />
 
     </RelativeLayout>
 </ScrollView>

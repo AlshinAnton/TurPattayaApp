@@ -47,6 +47,7 @@ public class SettingsWeatherActivity extends PreferenceActivity {
     public void setContentView(@LayoutRes int layoutResID) {
         getDelegate().setContentView(layoutResID);
     }
+
     @Override
     public void setContentView(View view) {
         getDelegate().setContentView(view);

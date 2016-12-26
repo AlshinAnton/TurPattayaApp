@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.viewpagerindicator.UnderlinePageIndicator;
+
 import java.util.ArrayList;
 
 import ru.turpattaya.turpattayaapp.BaseActivity;
@@ -29,6 +31,9 @@ public class ExcursionDetailActivity extends BaseActivity {
     ImageView imageFavoriteDetail;
     private ViewPager viewPagerDetail;
 
+    ImagesDetailPagerAdapter pagerAdapter;
+    ArrayList<String> urls = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,11 @@ public class ExcursionDetailActivity extends BaseActivity {
         viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
         imageFavoriteDetail = (ImageView) findViewById(R.id.image_detail_favorite);
         viewPagerDetail.setPageTransformer(true, new ImagesDetailAnimation());
+
+
+       /* viewPagerDetail.setAdapter(pagerAdapter);
+        UnderlinePageIndicator indicator = (UnderlinePageIndicator) findViewById(R.id.viewPager_indicator);
+        indicator.setViewPager(viewPagerDetail);*/
 
 
         helper = new MySQLiteHelper(this);
@@ -79,7 +89,7 @@ public class ExcursionDetailActivity extends BaseActivity {
 
         if (!imagesCursor.moveToFirst()) return;
 
-        ArrayList<String> urls = new ArrayList<>();
+
         while (!imagesCursor.isAfterLast()) {
             urls.add(imagesCursor.getString(imagesCursor.getColumnIndexOrThrow(ImagesDetailTable.COLUMN_IMAGESDETAIL_URL)));
             imagesCursor.moveToNext();
@@ -88,7 +98,7 @@ public class ExcursionDetailActivity extends BaseActivity {
 
         if (urls.isEmpty()) return;
 
-        ImagesDetailPagerAdapter pagerAdapter = new ImagesDetailPagerAdapter(getSupportFragmentManager(), urls);
+        pagerAdapter = new ImagesDetailPagerAdapter(getSupportFragmentManager(), urls);
         viewPagerDetail.setAdapter(pagerAdapter);
     }
 

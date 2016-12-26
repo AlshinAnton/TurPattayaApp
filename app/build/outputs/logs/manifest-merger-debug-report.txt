@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml
@@ -34,18 +34,18 @@ ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\Android
 	android:name
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:9:22-76
 application
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:11:5-47:19
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:11:5-57:19
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:percent:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\percent\24.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:14:9-41
@@ -55,78 +55,92 @@ MERGED from [com.android.support:support-compat:24.2.1] C:\Users\MSI\AndroidStud
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:12:9-35
 	android:icon
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:13:9-43
-	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:16:9-59
+meta-data#android.app.searchable
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:16:9-18:49
+	android:resource
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:18:13-47
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:17:13-50
 activity#ru.turpattaya.turpattayaapp.excursions.MainActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:17:9-26:20
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:19:9-36:20
 	android:label
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:19:13-45
-	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:20:13-63
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:21:13-45
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:18:13-52
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:20:13-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:25:27-74
+intent-filter#android.intent.action.SEARCH
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:27:13-29:29
+action#android.intent.action.SEARCH
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:28:17-71
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:28:25-68
+intent-filter#android.intent.action.VIEW
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:30:13-32:29
+action#android.intent.action.VIEW
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:25-66
 activity#ru.turpattaya.turpattayaapp.excursions.ExcursionDetailActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:27:9-30:66
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:9-40:66
 	android:label
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:29:13-68
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:39:13-68
 	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:30:13-63
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:40:13-63
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:28:13-63
-activity#ru.turpattaya.turpattayaapp.taxi.OrderForm
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:9-52
-	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:31:19-49
-activity#ru.turpattaya.turpattayaapp.taxi.TaxiActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:9-55
-	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:32:19-52
-activity#ru.turpattaya.turpattayaapp.BaseActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:33:9-35:66
-	android:theme
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:35:13-63
-	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:34:13-41
-activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:36:9-38:66
-	android:theme
 		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:38:13-63
+activity#ru.turpattaya.turpattayaapp.taxi.OrderForm
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:41:9-52
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:37:13-70
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:41:19-49
+activity#ru.turpattaya.turpattayaapp.taxi.TaxiActivity
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:42:9-55
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:42:19-52
+activity#ru.turpattaya.turpattayaapp.BaseActivity
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:43:9-45:66
+	android:theme
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:45:13-63
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:44:13-41
+activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:46:9-48:66
+	android:theme
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:48:13-63
+	android:name
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:47:13-70
 activity#ru.turpattaya.turpattayaapp.currencyExchange.CurrencyConverter
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:39:9-41:20
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:49:9-51:20
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:39:19-69
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:49:19-69
 activity#ru.turpattaya.turpattayaapp.weather.WeatherActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:42:9-61
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:52:9-61
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:42:19-58
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:52:19-58
 activity#ru.turpattaya.turpattayaapp.weather.SettingsWeatherActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:43:9-69
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:53:9-69
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:43:19-66
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:53:19-66
 activity#ru.turpattaya.turpattayaapp.MyFavoriteActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:44:9-56
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:54:9-56
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:44:19-53
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:54:19-53
 activity#ru.turpattaya.turpattayaapp.ShareActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:45:9-51
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:55:9-51
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:45:19-48
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:55:19-48
 activity#ru.turpattaya.turpattayaapp.ContactsActivity
-ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:46:9-63
+ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:56:9-63
 	android:name
-		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:46:19-51
+		ADDED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml:56:19-51
 uses-sdk
 INJECTED from C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:20:5-43
@@ -136,15 +150,16 @@ MERGED from [com.github.ganfra:material-spinner:1.1.1] C:\Users\MSI\AndroidStudi
 MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.mikepenz.materialdrawer:library:2.9.8] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.mikepenz.materialdrawer\library\2.9.8\AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.mikepenz.iconics:library:1.0.0] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.mikepenz.iconics\library\1.0.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.JakeWharton:ViewPagerIndicator:2.4.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.github.JakeWharton\ViewPagerIndicator\2.4.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.mikepenz.iconics:library:1.0.0] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.mikepenz.iconics\library\1.0.0\AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\MSI\AndroidStudioProjects\TurPattayaApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
