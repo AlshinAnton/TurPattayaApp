@@ -14,6 +14,7 @@ import ru.turpattaya.turpattayaapp.R;
 
 public class MainActivity extends BaseActivity {
 
+    ListView list;
     String orderBy = "";
     static String selection= "";
 
@@ -23,7 +24,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView list = (ListView) findViewById(R.id.list_excursion);
+        list = (ListView) findViewById(R.id.list_excursion);
 
         MySQLiteHelper helper = new MySQLiteHelper(this);
 
@@ -67,8 +68,22 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.category_islands:
+                MySQLiteHelper helper = new MySQLiteHelper(this);
+
+                Cursor cursor = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        selection,
+                        null,
+                        null,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID
+                );
+                ExcursionAdapter adapter = new ExcursionAdapter(this, cursor);
+                list.setAdapter(adapter);
 
                 return true;
+
             case R.id.category_zoo:
 
                 return true;
@@ -96,6 +111,11 @@ public class MainActivity extends BaseActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+/*    private void sortByCategory() {
+
+    }*/
+
 }
 
 /*    public void add_to_favorites(View view) {
