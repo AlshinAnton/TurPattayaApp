@@ -85,7 +85,7 @@ public class WeatherActivity extends BaseActivity implements WeatherServiceListe
 
         loadingDialog = new ProgressDialog(this);
         loadingDialog.setMessage(getString(R.string.loading));
-        loadingDialog.setCancelable(false);
+        loadingDialog.setCancelable(true);
         loadingDialog.show();
 
         String location = null;

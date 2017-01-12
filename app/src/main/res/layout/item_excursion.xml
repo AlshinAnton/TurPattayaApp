@@ -30,19 +30,7 @@
         android:textSize="20sp"
         tools:text="здесь описание экскурсии , краткий вариант блаблабла, бла бла бла!!!" />
 
-    <ImageView
-        android:id="@+id/item_list_favorite"
-        android:layout_width="wrap_content"
-        app:layout_widthPercent="25%"
-        android:layout_height="0dp"
-        app:layout_heightPercent="12%"
-        android:onClick="add_to_favorites"
-        android:src="@drawable/ic_favorite_border_black_24dp"
-        android:contentDescription="@string/favorites"
-        android:layout_below="@+id/text_price_preview"
-        android:scaleType="fitEnd"
-        android:layout_alignEnd="@+id/text_price_preview"
-        android:layout_toEndOf="@+id/text_excursion_preview" />
+
 
     <TextView
         android:id="@+id/text_price_preview"
@@ -59,17 +47,17 @@
         android:layout_toEndOf="@+id/text_excursion_preview" />
 </android.support.percent.PercentRelativeLayout>
 
-    <!--<android.support.percent.PercentFrameLayout
-    android:id="@+id/adapter_framelayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_heightPercent="70%">--><!--
-<RatingBar
-android:id="@+id/rating"
-android:theme="colorRatingBarBlue"
-android:layout_gravity="bottom"
-style="?android:attr/ratingBarStyleSmall"
-android:stepSize="0.5"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:visibility="visible"/>-->
+<!--
+<ImageView
+android:id="@+id/item_list_favorite"
+    android:layout_width="wrap_content"
+    app:layout_widthPercent="25%"
+    android:layout_height="0dp"
+    app:layout_heightPercent="12%"
+    android:onClick="add_to_favorites"
+    android:src="@drawable/ic_favorite_border_black_24dp"
+    android:contentDescription="@string/favorites"
+    android:layout_below="@+id/text_price_preview"
+    android:scaleType="fitEnd"
+    android:layout_alignEnd="@+id/text_price_preview"
+    android:layout_toEndOf="@+id/text_excursion_preview" />-->

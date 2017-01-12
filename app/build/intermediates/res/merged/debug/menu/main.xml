@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu >
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView"/>
+    <item
+        android:id="@+id/category"
+        android:title="Тип экскурсии"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_sort_white_24dp"
+        android:actionViewClass="android.widget.SearchView">
+        <menu>
+            <item
+                android:id="@+id/category_islands"
+                android:title="Острова" />
+            <item
+                android:id="@+id/category_zoo"
+                android:title="Зоопарки"/>
+            <item
+                android:id="@+id/category_show"
+                android:title="Шоу"/>
+            <item
+                android:id="@+id/category_temple"
+                android:title="Храмы"/>
+            <item
+                android:id="@+id/category_extreme"
+                android:title="Экстрим"/>
+            <item
+                android:id="@+id/category_gardens_and_attractions"
+                android:title="Парки и аттракционы"/>
+            <item
+                android:id="@+id/category_fishing"
+                android:title="Рыбалка"/>
+            <item
+                android:id="@+id/category_mix_tours"
+                android:title="Смешанные туры"/>
+            <item
+                android:id="@+id/category_nature"
+                android:title="Природа"/>
+        </menu>
+    </item>
 
 </menu>

@@ -43,7 +43,7 @@ public class CurrencyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View currencyItemView = layoutInflater.inflate(R.layout.currency_item, null);
+        View currencyItemView = layoutInflater.inflate(R.layout.item_currency, null);
         TextView tvName = (TextView) currencyItemView.findViewById(R.id.tvName);
         TextView tvRate = (TextView) currencyItemView.findViewById(R.id.tvRate);
 

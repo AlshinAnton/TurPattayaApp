@@ -8,18 +8,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.viewpagerindicator.UnderlinePageIndicator;
 
 import java.util.ArrayList;
 
 import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.MySQLiteHelper;
 import ru.turpattaya.turpattayaapp.R;
+import ru.turpattaya.turpattayaapp.ViewHolders.ViewHolderExcursionDetail;
 
 public class ExcursionDetailActivity extends BaseActivity {
 
@@ -28,11 +25,15 @@ public class ExcursionDetailActivity extends BaseActivity {
 
     private TextView pagetitleExcursionDetail;
     private TextView contentExcursionDetail;
-    ImageView imageFavoriteDetail;
+    /*ImageView imageFavoriteDetail;*/
     private ViewPager viewPagerDetail;
+    private TextView priceForDetail;
 
     ImagesDetailPagerAdapter pagerAdapter;
     ArrayList<String> urls = new ArrayList<>();
+
+    int c = 0x0E3F;
+    String s = Character.toString((char)c);
 
 
     @Override
@@ -43,11 +44,12 @@ public class ExcursionDetailActivity extends BaseActivity {
 
         Intent intent = getIntent();
         long id = intent.getLongExtra("id", 0);
-
+        ViewHolderExcursionDetail holder = new ViewHolderExcursionDetail();
         pagetitleExcursionDetail = (TextView) findViewById(R.id.excursion_detail_pagetitle);
         contentExcursionDetail = (TextView) findViewById(R.id.excursion_detail_content);
         viewPagerDetail = (ViewPager) findViewById(R.id.viewPager_excursion_detail);
-        imageFavoriteDetail = (ImageView) findViewById(R.id.image_detail_favorite);
+        priceForDetail = (TextView) findViewById(R.id.text_price_detail);
+        /*imageFavoriteDetail = (ImageView) findViewById(R.id.image_detail_favorite);*/
         viewPagerDetail.setPageTransformer(true, new ImagesDetailAnimation());
 
 
@@ -76,6 +78,24 @@ public class ExcursionDetailActivity extends BaseActivity {
             cursor.close();
         }
 
+        Cursor priceCursor = helper.getReadableDatabase().query(
+                ExcursionTable.TABLE_EXCURSION,
+                null,
+                ExcursionTable.COLUMN_EXCURSION_ID + " =?",
+                new String[]{String.valueOf(id)},
+                null,
+                null,
+                null,
+                null
+        );
+
+        if (priceCursor !=null && priceCursor.moveToFirst()) {
+             String price = priceCursor.getString(priceCursor.getColumnIndex(ExcursionTable.COLUMN_EXCURSION_VALUE));
+
+            priceForDetail.setText((price)+ s);
+            priceCursor.close();
+        }
+
         Cursor imagesCursor = helper.getReadableDatabase().query(
                 ImagesDetailTable.TABLE_IMAGESDETAIL,
                 null,
@@ -100,6 +120,7 @@ public class ExcursionDetailActivity extends BaseActivity {
 
         pagerAdapter = new ImagesDetailPagerAdapter(getSupportFragmentManager(), urls);
         viewPagerDetail.setAdapter(pagerAdapter);
+
     }
 
     private class ImagesDetailPagerAdapter extends FragmentStatePagerAdapter {
@@ -125,9 +146,9 @@ public class ExcursionDetailActivity extends BaseActivity {
         }
     }
 
-    public void add_to_favorites_from_detail(View view) {
+/*    public void add_to_favorites_from_detail(View view) {
         Toast.makeText(this, "Экскурсия добавлена в избранное", Toast.LENGTH_LONG).show();
-    }
+    }*/
 }
 
 

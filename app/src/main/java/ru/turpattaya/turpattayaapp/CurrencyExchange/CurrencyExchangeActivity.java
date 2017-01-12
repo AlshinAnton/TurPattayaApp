@@ -19,7 +19,6 @@ public class CurrencyExchangeActivity extends BaseActivity implements Callback<C
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.AppThemeDrawer);
         setContentView(R.layout.activity_currency_exchange);
         lvCurrency = (ListView) findViewById(R.id.lvCurrency);
     }

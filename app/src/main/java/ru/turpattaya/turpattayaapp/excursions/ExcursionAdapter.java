@@ -33,7 +33,7 @@ public class ExcursionAdapter extends CursorAdapter {
         holder.imagePreview = (ImageView) row.findViewById(R.id.image_preview);
         holder.textExcursionPreview = (TextView) row.findViewById(R.id.text_excursion_preview);
         holder.textPricePreview = (TextView) row.findViewById(R.id.text_price_preview);
-        holder.imageFavorite = (ImageView) viewGroup.findViewById(R.id.item_list_favorite);
+        /*holder.imageFavorite = (ImageView) viewGroup.findViewById(R.id.item_list_favorite);*/
 
         row.setTag(holder);
 

@@ -62,21 +62,21 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_taxi) {
             Intent intent = new Intent(this, TaxiActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_myFavorite) {
+/*        } else if (id == R.id.nav_myFavorite) {
             Intent intent = new Intent(this, MyFavoriteActivity.class);
-            startActivity(intent);
+            startActivity(intent);*/
         } else if (id == R.id.nav_rates) {
             Intent intent = new Intent(this, CurrencyExchangeActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_weather) {
             Intent intent = new Intent(this, WeatherActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_share) {
+/*        } else if (id == R.id.nav_share) {
             Intent intent = new Intent(this, ShareActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_contacts) {
             Intent intent = new Intent(this, ContactsActivity.class);
-            startActivity(intent);
+            startActivity(intent);*/
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

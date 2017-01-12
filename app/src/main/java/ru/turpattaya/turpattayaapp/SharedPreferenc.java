@@ -11,15 +11,12 @@ import java.util.List;
 
 import ru.turpattaya.turpattayaapp.excursions.Excursion;
 
-/**
- * Created by MSI on 12/22/2016.
- */
 
-public class SharedPreference {
+public class SharedPreferenc {
     public static final String PREFS_NAME = "PRODUCT_APP";
     public static final String FAVORITES = "Product_Favorite";
 
-    public SharedPreference() {
+    public SharedPreferenc() {
         super();
     }
 
