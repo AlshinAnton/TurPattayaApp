@@ -28,6 +28,16 @@
             android:title="Погода в Паттайе"
             android:icon="@drawable/ic_wb_sunny_white_24dp"/>
     </group>
+        <item android:title="Communicate">
+          <menu>
+
+              <item
+                  android:id="@+id/nav_contacts"
+                  android:checked="true"
+                  android:title="Контакты"
+                  android:icon="@drawable/ic_contact_phone_white_24dp"/>
+          </menu>
+      </item>
 
 
 
@@ -37,20 +47,12 @@
 android:id="@+id/nav_myFavorite"
 android:checked="true"
 android:title="Понравившиеся экскурсии"
-android:icon="@drawable/ic_favorite_white_24dp"/>-->
+android:icon="@drawable/ic_favorite_white_24dp"/
 
-    <!--    <item android:title="Communicate">
-            <menu>
-                <item
-                    android:id="@+id/nav_share"
-                    android:checked="true"
-                    android:title="Поделиться в социальных сетях"
-                    android:icon="@drawable/ic_menu_share"
-                    android:actionProviderClass="android.widget.ShareActionProvider"/>
-                <item
-                    android:id="@+id/nav_contacts"
-                    android:checked="true"
-                    android:title="Контакты"
-                    android:icon="@drawable/ic_contact_phone_white_24dp"/>
-            </menu>
-        </item>-->
+ <item
+                  android:id="@+id/nav_share"
+                  android:checked="true"
+                  android:title="Поделиться в социальных сетях"
+                  android:icon="@drawable/ic_menu_share"
+                  android:actionProviderClass="android.widget.ShareActionProvider"/>>-->
+

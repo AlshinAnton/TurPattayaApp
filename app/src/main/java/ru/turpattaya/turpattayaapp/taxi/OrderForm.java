@@ -154,7 +154,7 @@ public class OrderForm extends BaseActivity {
                     case R.id.btn_send_form:
                         Intent send = new Intent(Intent.ACTION_SENDTO);
                         String uriText =
-                                "mailto:" + Uri.encode("ALSHINANTON@gmail.com") +
+                                "mailto:" + Uri.encode("TURPATTAYA@gmail.com") +
                                         "?subject=" + Uri.encode("Заказ такси/TaxiOrder") +
                                         "&body=" + Uri.encode("Откуда  " + pickupPlace.getText().toString() + "\n" +
                                         "Куда " + destinationOrderForm.getText().toString() + "\n" +

@@ -71,12 +71,13 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_weather) {
             Intent intent = new Intent(this, WeatherActivity.class);
             startActivity(intent);
+        } else if (id == R.id.nav_contacts) {
+        Intent intent = new Intent(this, ContactsActivity.class);
+        startActivity(intent);
 /*        } else if (id == R.id.nav_share) {
             Intent intent = new Intent(this, ShareActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_contacts) {
-            Intent intent = new Intent(this, ContactsActivity.class);
-            startActivity(intent);*/
+        */
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
