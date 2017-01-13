@@ -19,7 +19,7 @@
 
 
     <string-array name="spinner_car_type">
-        <item>Выберите тип машины</item>
+        <item>Тип машины</item>
         <item>Легковая</item>
         <item>Минивэн</item>
         <item>Микроавтобус</item>

@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Пожалуйста, заполните форму для заказа такси:"
             android:textSize="18sp"
+            android:textStyle="italic"
             android:padding="5dp"
             android:textAlignment="center"
             android:textColor="@android:color/black" />
@@ -27,6 +28,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:textSize="16sp"
+            android:textStyle="italic"
             android:id="@+id/pickup_place_orderform"
             android:hint="Место подачи машины"
             android:textAlignment="center" />
@@ -41,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textStyle="italic"
             android:textSize="16sp"
             android:id="@+id/destination_orderform"
             android:hint="Пункт назначения (город, отель)"
@@ -52,6 +55,7 @@
             android:ems="10"
             android:id="@+id/car_orderform"
             android:hint="Тип машины"
+            android:textStyle="italic"
             android:textSize="16sp"
             android:textAlignment="center" />
 
@@ -60,6 +64,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Цена"
+            android:textStyle="italic"
             android:textSize="16sp"
             android:id="@+id/price_orderform"
             android:textAlignment="center"/>
@@ -67,7 +72,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -80,6 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textStyle="italic"
                 android:clickable="true"
                 android:id="@+id/date_orderform"
                 android:inputType="date"
@@ -91,7 +98,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-
                 android:layout_weight="1"
                 android:id="@+id/input_layout_time_orderform">
             <EditText
@@ -99,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:clickable="true"
+                android:textStyle="italic"
                 android:inputType="time"
                 android:id="@+id/time_orderform"
                 android:gravity="center"
@@ -115,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:textStyle="italic"
                 android:id="@+id/name_orderform"
                 android:hint="Имя"
                 android:gravity="center" />
@@ -129,6 +137,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
+                android:textStyle="italic"
                 android:id="@+id/mail_orderform"
                 android:hint="Введите адрес электронной почты"
                 android:gravity="center" />
@@ -142,6 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
+                android:textStyle="italic"
                 android:ems="10"
                 android:id="@+id/phone_orderform"
                 android:hint="Номер телефона"
@@ -163,6 +173,7 @@
                 android:ems="10"
                 android:id="@+id/num_of_passengers_orderform"
                 android:hint="Колличество пассажиров"
+                android:textStyle="italic"
                 android:gravity="center" />
         </android.support.design.widget.TextInputLayout>
 
@@ -175,6 +186,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Пожелания"
+                android:textStyle="italic"
                 android:id="@+id/remark_orderform"
                 android:gravity="center"
                 android:inputType="textImeMultiLine" />
@@ -192,7 +204,8 @@
                 android:id="@+id/btn_send_form"
                 android:layout_weight="1"
                 android:text="Заказать"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -201,7 +214,8 @@
                 android:layout_weight="1"
                 android:text="Назад"
                 android:onClick="backToTaxiActivity"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>

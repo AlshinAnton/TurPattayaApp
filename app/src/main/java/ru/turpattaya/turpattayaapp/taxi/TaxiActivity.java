@@ -53,7 +53,7 @@ public class TaxiActivity extends BaseActivity {
 
         helper = new MySQLiteHelper(this);
         destinationArray = new ArrayList<>();
-        destinationArray.add("Выберите куда");
+        destinationArray.add("Куда");
 
 
         final Cursor cursor = helper.getReadableDatabase().query(
@@ -69,7 +69,7 @@ public class TaxiActivity extends BaseActivity {
 
         ArrayList<String> fromArray = new ArrayList<>();
         fromPares = new HashMap<>();
-        fromArray.add("Выберите откуда");
+        fromArray.add("Откуда");
 
         if (cursor.moveToFirst()) {
             while (!cursor.isAfterLast()) {
@@ -99,7 +99,7 @@ public class TaxiActivity extends BaseActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 String selectedText = parent.getItemAtPosition(position).toString();
-                if (selectedText.contains("Выберите")) {
+                if (selectedText.contains("Откуда")) {
                     fromCode = "";
                     return;
                 }
@@ -120,7 +120,7 @@ public class TaxiActivity extends BaseActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedText = parent.getItemAtPosition(position).toString();
-                if (selectedText.contains("Выберите")) {
+                if (selectedText.contains("Куда")) {
                     destinationCode = "";
                     /*spinnerCar.setClickable(false);*/
                     return;
@@ -168,7 +168,7 @@ public class TaxiActivity extends BaseActivity {
 
     private void fillDestinationSpinner(String fromCode) {
         destinationArray = new ArrayList<>();
-        destinationArray.add("Выберите куда");
+        destinationArray.add("Куда");
         destinationPares = new HashMap<>();
 
         /*SELECT tdt.destinationCode, tdt.destinationRussianName FROM TaxiTable tt

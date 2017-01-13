@@ -35,12 +35,12 @@ public class SettingsWeatherActivity extends PreferenceActivity {
         super.onPostCreate(savedInstanceState);
         getDelegate().onPostCreate(savedInstanceState);
     }
-    public ActionBar getSupportActionBar() {
+/*    public ActionBar getSupportActionBar() {
         return getDelegate().getSupportActionBar();
     }
     public void setSupportActionBar(@Nullable Toolbar toolbar) {
         getDelegate().setSupportActionBar(toolbar);
-    }
+    }*/
     @NonNull
     @Override
     public MenuInflater getMenuInflater() {

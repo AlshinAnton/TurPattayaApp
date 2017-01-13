@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/contacts_tittle"
         android:text="Контактная информация"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:textStyle="bold"
@@ -108,7 +108,6 @@
         android:id="@+id/contacts_webSite"
         android:text="http://turpattaya.ru/"
         android:textSize="14sp"
-        android:clickable="true"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textColor="#000000"

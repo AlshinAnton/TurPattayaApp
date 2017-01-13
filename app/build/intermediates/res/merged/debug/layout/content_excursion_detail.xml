@@ -28,7 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/viewPager_excursion_detail"
             android:layout_centerHorizontal="true"
-            android:padding="@dimen/material_drawer_item_primary_text"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="14sp"
+            android:layout_centerInParent="true"
             android:textSize="20sp" />
 
         <TextView
@@ -36,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:textStyle="italic"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/excursion_detail_pagetitle"/>
 
@@ -43,6 +46,7 @@
             android:id="@+id/excursion_detail_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="italic"
             android:layout_below="@+id/text_price_detail"
             android:layout_centerHorizontal="true"
             android:padding="6dp" />
