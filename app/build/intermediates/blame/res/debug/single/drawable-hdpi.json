@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_favorite_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_favorite_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_downward_black_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_arrow_downward_black_24dp.png"
     },
@@ -12,20 +20,20 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_favorite_border_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png"
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_wb_sunny_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_wb_sunny_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_directions_bus_white_24dp.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_directions_bus_white_24dp.png"
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_wb_sunny_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_wb_sunny_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_euro_symbol_white_24dp.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_euro_symbol_white_24dp.png"
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_my_location_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_my_location_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_info_white_24dp.png",
@@ -34,6 +42,74 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_favorite_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_favorite_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_sort_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_sort_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_directions_bus_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_directions_bus_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_downward_black_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_arrow_downward_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_search_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_search_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_contact_phone_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_contact_phone_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_search_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_search_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.9.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\logo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_vertical_align_bottom_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_vertical_align_bottom_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_forward_black_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_arrow_forward_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_pool_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_pool_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_directions_bus_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_directions_bus_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_euro_symbol_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_euro_symbol_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_contact_phone_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_contact_phone_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.9.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\logo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_local_taxi_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_local_taxi_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_euro_symbol_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_euro_symbol_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_favorite_border_black_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_favorite_border_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_local_taxi_white_24dp.png",
@@ -48,19 +124,15 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_sort_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_search_white_24dp.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_search_white_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_contact_phone_white_24dp.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_contact_phone_white_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo.9.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\logo.9.png"
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_forward_black_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_arrow_forward_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_vertical_align_bottom_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_vertical_align_bottom_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_info_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_info_white_24dp.png"
     }
 ]
