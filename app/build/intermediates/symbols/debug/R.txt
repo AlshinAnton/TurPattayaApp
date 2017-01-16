@@ -1267,6 +1267,7 @@ int id category_extreme 0x7f0e00f3
 int id category_fishing 0x7f0e00f5
 int id category_gardens_and_attractions 0x7f0e00f4
 int id category_islands 0x7f0e00ef
+int id category_main 0x7f0e00f8
 int id category_mix_tours 0x7f0e00f6
 int id category_nature 0x7f0e00f7
 int id category_show 0x7f0e00f1
@@ -1295,7 +1296,7 @@ int id container 0x7f0e00c0
 int id contentPanel 0x7f0e0052
 int id content_fragment_taxi 0x7f0e00a6
 int id content_layout 0x7f0e00c4
-int id currentLocation 0x7f0e00f8
+int id currentLocation 0x7f0e00f9
 int id custom 0x7f0e0058
 int id customPanel 0x7f0e0057
 int id date_orderform 0x7f0e0096
@@ -1407,7 +1408,7 @@ int id search_plate 0x7f0e006b
 int id search_src_text 0x7f0e006c
 int id search_voice_btn 0x7f0e0070
 int id select_dialog_listview 0x7f0e0071
-int id settings 0x7f0e00f9
+int id settings 0x7f0e00fa
 int id shadow_top 0x7f0e00d8
 int id shortcut 0x7f0e005b
 int id showCustom 0x7f0e0014

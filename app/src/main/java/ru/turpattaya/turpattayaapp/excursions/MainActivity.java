@@ -101,46 +101,171 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.category_islands:
-                MySQLiteHelper helper = new MySQLiteHelper(this);
+                helper = new MySQLiteHelper(this);
 
-                Cursor cursor = helper.getReadableDatabase().query(
+                Cursor cursorSort = helper.getReadableDatabase().query(
                         ExcursionTable.TABLE_EXCURSION,
                         null,
-                        selection,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(1)},
                         null,
                         null,
                         null,
-                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID
+                        orderBy
                 );
-                ExcursionAdapter adapter = new ExcursionAdapter(this, cursor);
+                ExcursionAdapter adapter = new ExcursionAdapter(this, cursorSort);
                 list.setAdapter(adapter);
 
                 return true;
 
             case R.id.category_zoo:
 
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(2)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
+
                 return true;
+
             case R.id.category_show:
 
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(3)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
+
                 return true;
+
             case R.id.category_temple:
 
-                return true;
-            case R.id.category_extreme:
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(4)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
 
                 return true;
+
+            case R.id.category_extreme:
+
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(5)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
+
+                return true;
+
             case R.id.category_gardens_and_attractions:
+
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(6)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
 
                 return true;
             case R.id.category_fishing:
 
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(8)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
+
                 return true;
+
             case R.id.category_mix_tours:
 
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(9)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
                 return true;
+
             case R.id.category_nature:
 
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        ExcursionTable.COLUMN_EXCURSION_CATEGORYID + " =?",
+                        new String[]{String.valueOf(10)},
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
+
                 return true;
+
+            case R.id.category_main:
+
+                cursorSort = helper.getReadableDatabase().query(
+                        ExcursionTable.TABLE_EXCURSION,
+                        null,
+                        selection,
+                        null,
+                        null,
+                        null,
+                        orderBy
+                );
+                adapter = new ExcursionAdapter(this, cursorSort);
+                list.setAdapter(adapter);
+
         }
         return super.onOptionsItemSelected(item);
     }

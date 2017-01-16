@@ -40,6 +40,10 @@
             <item
                 android:id="@+id/category_nature"
                 android:title="Природа"/>
+            <item
+                android:id="@+id/category_main"
+                android:title="Отменить фильтры"
+                app:itemTextColor="@color/colorPrimaryDark"/>
         </menu>
     </item>
 
