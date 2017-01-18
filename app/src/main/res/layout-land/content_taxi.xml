@@ -32,33 +32,44 @@
             android:text="Компания Turpattaya осуществляет трансферы по Тайланду. Заказать такси с нами легко." />
 
 
+        <LinearLayout
+            android:id="@+id/linear_taxi_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/content_fragment_taxi">
         <Spinner
             android:id="@+id/spinner_from_taxi_fragment"
             style="@style/Base.Theme.AppCompat.Dialog"
-            android:layout_width="350dp"
+            android:layout_width="230dp"
+            android:layout_marginStart="5dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/content_fragment_taxi"
-            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="5dp"
             android:spinnerMode="dialog" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"/>
 
 
         <Spinner
             android:id="@+id/spinner_destination_fragment_taxi"
-            android:layout_width="350dp"
+            android:layout_width="230dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/spinner_from_taxi_fragment"
-            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="5dp"
             android:layout_marginTop="5dp"
-            android:spinnerMode="dialog">
-
-        </Spinner>
+            android:spinnerMode="dialog"/>
+        </LinearLayout>
 
         <Spinner
             android:id="@+id/spinner_typeOfCar_fragment_taxi"
-            android:layout_width="350dp"
+            android:layout_width="230dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/spinner_destination_fragment_taxi"
+            android:layout_below="@+id/linear_taxi_land"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:spinnerMode="dialog">

@@ -1,17 +1,11 @@
 package ru.turpattaya.turpattayaapp.excursions;
 
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import java.util.ArrayList;
 
 import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.MySQLiteHelper;
@@ -19,9 +13,9 @@ import ru.turpattaya.turpattayaapp.R;
 
 public class MainActivity extends BaseActivity {
 
-    ListView list;
+    ListView listExcursion;
     String orderBy = "";
-    static String selection= "";
+    static String selection = "";
     MySQLiteHelper helper;
 
     @Override
@@ -30,7 +24,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        list = (ListView) findViewById(R.id.list_excursion);
+        listExcursion = (ListView) findViewById(R.id.list_excursion);
 
         helper = new MySQLiteHelper(this);
 
@@ -44,56 +38,48 @@ public class MainActivity extends BaseActivity {
                 orderBy
         );
         ExcursionAdapter adapter = new ExcursionAdapter(this, cursor);
-        list.setAdapter(adapter);
+        listExcursion.setAdapter(adapter);
+
+
     }
 
-        @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
+       /* MenuItem searchItem = menu.findItem(R.id.item_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
-            MenuItem searchItem = menu.findItem(R.id.item_search);
-            SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return true;
+            }
 
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                                                    /*ArrayList<String> tempList = new ArrayList<>();
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Cursor cursor1 = helper.getReadableDatabase().rawQuery("SELECT * FROM ExcursionTable WHERE pagetitle like '%" + query + "%'", null);
+                ExcursionAdapter adapter = new ExcursionAdapter(MainActivity.this, cursor1);
+                listExcursion.setAdapter(adapter);
+                return true;
+            }
+        });
 
-                                                    for(String temp : items) {
-                                                        if (temp.toLowerCase().contains(newText.toLowerCase())) {
-                                                            tempList.add(temp);
-                                                        }
-                                                    }
-                                                    ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, tempList);
-                                                    list.setAdapter(adapter);
-                                                    return true;*/
+        MenuItemCompat.setOnActionExpandListener(searchItem, new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
 
-                    /*helper = new MySQLiteHelper(MainActivity.this);
+                return true;
+            }
 
-                    Cursor cursor = helper.getReadableDatabase().query(
-                            ExcursionDetailTable.TABLE_EXCURSIONDETAIL,
-                            null,
-                            ExcursionTable.COLUMN_EXCURSION_PAGETITLE + " =?",
-                            new String[]{String.valueOf(id)},
-                            null,
-                            null,
-                            null,
-                            null
-                    );
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
 
-                        cursor.close();*/
-
+                return true;
+            }
+        });*/
 
 
-                    return true;
-                }
-
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    return false;
-                }
-            });
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -114,7 +100,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 ExcursionAdapter adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -131,7 +117,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -148,7 +134,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -165,7 +151,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -182,7 +168,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -199,7 +185,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
             case R.id.category_fishing:
@@ -215,7 +201,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -232,7 +218,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
                 return true;
 
             case R.id.category_nature:
@@ -248,7 +234,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
                 return true;
 
@@ -264,7 +250,7 @@ public class MainActivity extends BaseActivity {
                         orderBy
                 );
                 adapter = new ExcursionAdapter(this, cursorSort);
-                list.setAdapter(adapter);
+                listExcursion.setAdapter(adapter);
 
         }
         return super.onOptionsItemSelected(item);

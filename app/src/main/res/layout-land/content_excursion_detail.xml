@@ -21,8 +21,10 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager_excursion_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp" />
+            android:layout_width="450dp"
+            android:paddingTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="200dp" />
         <!--android:layout_centerHorizontal="true"-->
 
 

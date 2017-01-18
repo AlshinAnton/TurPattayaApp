@@ -41,6 +41,7 @@
     <TextView
         android:id="@+id/contacts_phone_rus"
         android:text="+66-82-931-7754"
+        android:autoLink="phone"
         android:textSize="14sp"
         android:layout_centerHorizontal="true"
         android:paddingBottom="10dp"
@@ -63,6 +64,7 @@
     <TextView
         android:id="@+id/contacts_phone_local"
         android:text="082-931-7754"
+        android:autoLink="phone"
         android:textSize="14sp"
         android:layout_centerHorizontal="true"
         android:paddingBottom="10dp"

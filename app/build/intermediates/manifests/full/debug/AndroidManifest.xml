@@ -61,6 +61,7 @@
         <activity android:name="ru.turpattaya.turpattayaapp.MyFavoriteActivity" />
         <activity android:name="ru.turpattaya.turpattayaapp.ShareActivity" />
         <activity android:name="ru.turpattaya.turpattayaapp.ContactsActivity" />
+        <activity android:name="ru.turpattaya.turpattayaapp.FreeTransfersActivity" />
     </application>
 
 </manifest>

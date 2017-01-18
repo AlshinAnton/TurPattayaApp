@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_sort_white_24dp.png",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_sort_white_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_wb_sunny_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_wb_sunny_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_sort_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_sort_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_vertical_align_top_white_24dp.png",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_contact_phone_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_contact_phone_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_name.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_name.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_favorite_white_24dp.png",
@@ -106,6 +110,10 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_local_taxi_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_local_taxi_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_money_off_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_money_off_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_info_white_24dp.png",

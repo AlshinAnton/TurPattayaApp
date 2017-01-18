@@ -6,7 +6,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:padding="10dp"
+    android:padding="5dp"
     tools:context="ru.turpattaya.turpattayaapp.excursions.MainActivity">
 
 
@@ -25,7 +25,7 @@
         app:layout_widthPercent="70%"
         android:layout_height="0dp"
         app:layout_heightPercent="25%"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_alignParentBottom="true"
         android:textSize="18sp"
         android:textStyle="italic"
@@ -42,7 +42,7 @@
         android:textSize="20sp"
         tools:text="2500"
         android:textAlignment="textEnd"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         android:textStyle="normal|bold"
         android:layout_below="@+id/image_preview"
         android:layout_toEndOf="@+id/text_excursion_preview" />

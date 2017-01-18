@@ -5,11 +5,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-
-
     <include layout="@layout/content_excursion_detail" />
-
-
-
 
 </android.support.v4.widget.DrawerLayout>

@@ -4,6 +4,10 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_favorite_white_24dp.png"
     },
     {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_money_off_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_money_off_white_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-hdpi\\ic_vertical_align_top_white_24dp.png"
     },
@@ -86,6 +90,10 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_directions_bus_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_directions_bus_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_name.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-hdpi\\ic_action_name.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_euro_symbol_white_24dp.png",

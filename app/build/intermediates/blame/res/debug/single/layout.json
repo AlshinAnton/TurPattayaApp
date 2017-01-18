@@ -20,12 +20,12 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\layout\\design_navigation_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\layout\\design_navigation_menu.xml"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_orderform_taxi.xml",
@@ -118,6 +118,10 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_detail_excursion.xml",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\layout\\fragment_detail_excursion.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_free_transfer.xml",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\layout\\item_free_transfer.xml"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
@@ -444,6 +448,10 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_free_transfers.xml",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\layout\\content_free_transfers.xml"
+    },
+    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_orderform_taxi.xml",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\layout\\content_orderform_taxi.xml"
     },
@@ -550,6 +558,10 @@
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_free_transfers.xml",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\layout\\activity_free_transfers.xml"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",

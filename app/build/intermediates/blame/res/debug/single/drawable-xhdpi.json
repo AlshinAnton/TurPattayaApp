@@ -60,8 +60,16 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_arrow_downward_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_name.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
+    },
+    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_info_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-xhdpi\\ic_info_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_money_off_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_money_off_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_search_white_24dp.png",

@@ -1,0 +1,29 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_main" />
+
+    <TextView
+        android:id="@+id/text_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_below="@+id/appBar"
+        android:text="Трансферы осуществляютсся с 9:00 до 17:00. Это абсолютно БЕСПЛАТНО. Машина будет ждать Вас у отеля в течение часа. Телефон: 082-931-7754"/>
+
+    <ListView
+        android:id="@+id/list_free_transfers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_intro"
+        android:layout_marginTop="@dimen/fab_margin">
+    </ListView>
+
+
+</RelativeLayout>

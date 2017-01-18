@@ -7,6 +7,11 @@
         android:title="Экскурсии" />
 
     <item
+        android:id="@+id/nav_free_transfers"
+        android:icon="@drawable/ic_money_off_white_24dp"
+        android:title="Бесплатно"/>
+
+    <item
         android:id="@+id/nav_taxi"
         android:icon="@drawable/ic_local_taxi_white_24dp"
         android:title="Такси" />
@@ -26,8 +31,7 @@
     <item
         android:id="@+id/nav_contacts"
         android:icon="@drawable/ic_contact_phone_white_24dp"
-        android:title="Контакты"
-        />
+        android:title="Контакты" />
 
 
 </menu>

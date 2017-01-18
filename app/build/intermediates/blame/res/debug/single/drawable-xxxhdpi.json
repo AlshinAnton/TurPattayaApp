@@ -92,6 +92,10 @@
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattaya\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_contact_phone_white_24dp.png"
     },
     {
+        "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_money_off_white_24dp.png",
+        "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_money_off_white_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_wb_sunny_white_24dp.png",
         "source": "C:\\Users\\MSI\\AndroidStudioProjects\\TurPattayaApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_wb_sunny_white_24dp.png"
     },
