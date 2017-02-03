@@ -9,9 +9,11 @@ import ru.turpattaya.turpattayaapp.excursions.CategoryTable;
 import ru.turpattaya.turpattayaapp.excursions.ExcursionDetailTable;
 import ru.turpattaya.turpattayaapp.excursions.ExcursionTable;
 import ru.turpattaya.turpattayaapp.excursions.ImagesDetailTable;
+import ru.turpattaya.turpattayaapp.freeTransfers.FreeTransfersTable;
 import ru.turpattaya.turpattayaapp.taxi.TaxiDestinationTable;
 import ru.turpattaya.turpattayaapp.taxi.TaxiFromTable;
 import ru.turpattaya.turpattayaapp.taxi.TaxiTable;
+
 
 public class MySQLiteHelper extends SQLiteAssetHelper {
 
@@ -20,17 +22,21 @@ public class MySQLiteHelper extends SQLiteAssetHelper {
 
     public MySQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        setForcedUpgrade();
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i3) {
-        ExcursionTable.onUpgrade(sqLiteDatabase, i, i3);
-        ExcursionDetailTable.onUpgrade(sqLiteDatabase, i, i3);
-        CategoryTable.onUpgrade(sqLiteDatabase, i, i3);
-        ImagesDetailTable.onUpgrade(sqLiteDatabase, i, i3);
-        TaxiDestinationTable.onUpgrade(sqLiteDatabase, i, i3);
-        TaxiFromTable.onUpgrade(sqLiteDatabase, i, i3);
-        TaxiTable.onUpgrade(sqLiteDatabase, i, i3);
-        FreeTransfersTable.onUpgrade(sqLiteDatabase, i, i3);
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i1, int i2) {
+        ExcursionTable.onUpgrade(sqLiteDatabase, i1, i2);
+        ExcursionDetailTable.onUpgrade(sqLiteDatabase, i1, i2);
+        CategoryTable.onUpgrade(sqLiteDatabase, i1, i2);
+        ImagesDetailTable.onUpgrade(sqLiteDatabase, i1, i2);
+        TaxiDestinationTable.onUpgrade(sqLiteDatabase, i1, i2);
+        TaxiFromTable.onUpgrade(sqLiteDatabase, i1, i2);
+        TaxiTable.onUpgrade(sqLiteDatabase, i1, i2);
+        FreeTransfersTable.onUpgrade(sqLiteDatabase, i1, i2);
     }
 }
+
+
+

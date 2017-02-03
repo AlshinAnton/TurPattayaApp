@@ -6,7 +6,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context="ru.turpattaya.turpattayaapp.excursions.MainActivity">
 
     <ImageView
         android:id="@+id/image_preview"

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.turpattaya.turpattayaapp"
-    android:versionCode="6"
-    android:versionName="1.5" >
+    android:versionCode="8"
+    android:versionName="1.7" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -61,7 +61,7 @@
         <activity android:name="ru.turpattaya.turpattayaapp.MyFavoriteActivity" />
         <activity android:name="ru.turpattaya.turpattayaapp.ShareActivity" />
         <activity android:name="ru.turpattaya.turpattayaapp.ContactsActivity" />
-        <activity android:name="ru.turpattaya.turpattayaapp.FreeTransfersActivity" />
+        <activity android:name="ru.turpattaya.turpattayaapp.freeTransfers.FreeTransfersActivity" />
     </application>
 
 </manifest>

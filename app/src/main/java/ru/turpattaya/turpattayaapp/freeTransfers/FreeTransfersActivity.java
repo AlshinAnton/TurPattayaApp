@@ -1,12 +1,12 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.freeTransfers;
 
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import ru.turpattaya.turpattayaapp.excursions.ExcursionAdapter;
-import ru.turpattaya.turpattayaapp.excursions.ExcursionTable;
+import ru.turpattaya.turpattayaapp.BaseActivity;
+import ru.turpattaya.turpattayaapp.MySQLiteHelper;
+import ru.turpattaya.turpattayaapp.R;
 
 public class FreeTransfersActivity extends BaseActivity {
 

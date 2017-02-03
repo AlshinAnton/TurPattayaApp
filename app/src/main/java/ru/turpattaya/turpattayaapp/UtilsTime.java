@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 
-public class Utils {
+public class UtilsTime {
     public static String getDate(long date) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy", Locale.getDefault());
         return dateFormat.format(date);
@@ -18,6 +18,7 @@ public class Utils {
     public static String getFullDate(long date) {
         SimpleDateFormat fullDateFormat = new SimpleDateFormat("dd.MM.yy HH:mm", Locale.getDefault());
         return fullDateFormat.format(date);
-
     }
+
+
 }

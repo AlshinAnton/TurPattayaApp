@@ -7,12 +7,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import ru.turpattaya.turpattayaapp.currencyExchange.CurrencyExchangeActivity;
 import ru.turpattaya.turpattayaapp.excursions.MainActivity;
+import ru.turpattaya.turpattayaapp.freeTransfers.FreeTransfersActivity;
 import ru.turpattaya.turpattayaapp.taxi.TaxiActivity;
 import ru.turpattaya.turpattayaapp.weather.WeatherActivity;
 

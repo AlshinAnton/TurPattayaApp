@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.freeTransfers;
 
 import android.database.sqlite.SQLiteDatabase;
 

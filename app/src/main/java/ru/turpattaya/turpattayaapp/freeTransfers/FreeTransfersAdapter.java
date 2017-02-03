@@ -1,4 +1,4 @@
-package ru.turpattaya.turpattayaapp;
+package ru.turpattaya.turpattayaapp.freeTransfers;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import ru.turpattaya.turpattayaapp.R;
 import ru.turpattaya.turpattayaapp.ViewHolders.ViewHolderFreeTransfers;
 
 public class FreeTransfersAdapter extends CursorAdapter {

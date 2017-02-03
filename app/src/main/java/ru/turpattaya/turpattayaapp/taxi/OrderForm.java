@@ -25,7 +25,7 @@ import ru.turpattaya.turpattayaapp.BaseActivity;
 import ru.turpattaya.turpattayaapp.fragments.DatePickerFragment;
 import ru.turpattaya.turpattayaapp.R;
 import ru.turpattaya.turpattayaapp.fragments.TimePickerFragment;
-import ru.turpattaya.turpattayaapp.Utils;
+import ru.turpattaya.turpattayaapp.UtilsTime;
 
 
 public class OrderForm extends BaseActivity {
@@ -103,7 +103,7 @@ public class OrderForm extends BaseActivity {
                         calendar.set(Calendar.YEAR, year);
                         calendar.set(Calendar.MONTH, monthOfYear);
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                        dateOrderForm.setText(Utils.getDate(calendar.getTimeInMillis()));
+                        dateOrderForm.setText(UtilsTime.getDate(calendar.getTimeInMillis()));
                     }
 
                     @Override
@@ -129,7 +129,7 @@ public class OrderForm extends BaseActivity {
                         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         calendar.set(Calendar.MINUTE, minute);
                         calendar.set(Calendar.SECOND, 0);
-                        timeOrderForm.setText(Utils.getTime(calendar.getTimeInMillis()));
+                        timeOrderForm.setText(UtilsTime.getTime(calendar.getTimeInMillis()));
                     }
 
                     @Override
