@@ -48,9 +48,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-      /*  setTheme(R.style.AppThemeDrawer);*/
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
